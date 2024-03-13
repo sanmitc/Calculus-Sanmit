@@ -1,2 +1,0 @@
-In this github repository I upload various mathematical subjects in form of book. I plan to upload Linear Algebra, One dimensional calculus, Multivariate calculus(including vector calculus) and finally, Probability
-  and statistics. I plan to add more Machine Learning oriented chapters in some few years time, including optimization, and basic Machine Learning models. 
