@@ -1,8 +1,8 @@
-### Github repository for Mathematical Subjects
+## Github repository for Mathematical Subjects
 
 In this github repository I have added many mathematical subjects. These are all in form of Overleaf projects that can be directly imported to overeleaf and printed as a book. These books have been divided into extensive chapters for better structuring. These chapters are mainly meant for a reader who is interested into entering the field of Machine Learning and wants to understand the basics of it. There are several Machine learning algorithms available that can be implemented as a black box, but in real life it is crucial to be informed about the inner workings of these methods to better judge the applicability of these methods in a better way and also modifying the functions will follow. 
 
-For now, in the next few months(before June 2024), I intend to roll these subjects:
+#### For now, in the next few months(before June 2024), I intend to roll these subjects:
 
 * *Linear Algebra*: It contains most of the basics needed for algorithms, numerical stuff, ML, and Quantum Mechanics.
 * *Single Variable Calculus*: This book contains very basic and superficial study of calculus, mainly staged as a short course for beginner's. This contains all the basic notions like limits, and then it starts from the concepts of one dimensional differentiation and extrapolates this knowledge to maxima-minima, continuity-differentiability and practical uses of differentiation. Then I start with integration and also point out practical uses. One of my motives will be also expose the reader to the computational aspect of calculus, I plan to cover more on ```numerical integration``` and expose the reader to the vast world of nunmerical libraries that carry out these algorithms.
