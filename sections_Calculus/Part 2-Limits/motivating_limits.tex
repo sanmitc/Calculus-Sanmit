@@ -1,0 +1,92 @@
+\section{Why Limits}
+
+Limits are the starting point of calculus. After we know functions in great detail, seeing how they behave near particular points becomes interesting. Many functions may behave peculiarly at specific inputs; seeing what happens in the neighborhood is imperative. 
+
+Our whole point of studying limits is to analyze a point's neighborhood and the function's related behavior. 
+
+We can get the intuition of limits by a displacement time graph. For example, if a car goes between two houses, it takes 2 hours to cover the 100 km distance between them. Then, we will define the average velocity as 50km/hr. But does that mean that the car was moving uniformly in between with 50km/hr velocity? The answer would be a big \textbf{NO}—this average velocity is a function of the time interval between two adjacent measurements. We get the real picture riddled with velocity fluctuations of the car in the middle of the journey as we keep decreasing this time interval. That is why, in terms of physics, we define the velocity or the instantaneous velocity as the distance covered in a given time interval when the time interval goes to 0.
+
+$$v =\lim_{t\to 0}\frac{\Delta x}{\Delta t}$$
+
+In this case and in real life, many functions' behavior, validity, and robustness depend on how they behave near some special points. Many important practical and physical insights can be extracted from the behavior of these functions in notable neighborhoods. Thus, the limit becomes the cradle of calculus because it helps us extensively in entering into the realm of other procedures of calculus, such as differentiation and integration, all having the notion of limits ingrained in their definitions. 
+
+In economics and finance, limits are utilized to model optimization problems, such as maximizing profit or minimizing cost functions. Understanding limits allows economists and analysts to identify critical points where these functions reach extreme values, enabling informed decision-making in resource allocation and investment strategies.
+
+In engineering, limits are indispensable for analyzing the behavior of systems subjected to varying conditions. Whether designing structures to withstand extreme loads or optimizing the performance of mechanical systems, engineers rely on limits to assess stability, efficiency, and safety.
+
+In essence, mastery of limits empowers us to tackle indeterminate forms and unlock deeper insights into the behavior of functions across diverse disciplines. By honing our understanding of limits and employing sophisticated techniques, we can unravel complex mathematical phenomena, paving the way for innovation, discovery, and problem-solving in numerous fields.
+
+
+\section{Neighbourhood of a point}
+
+In the context of limits and calculus, the neighborhood of a point refers to a set of points that are close to the given point within a certain distance. More formally, let's consider a point \( c \) in the domain of a function \( f(x) \). A neighborhood of \( c \), denoted by \( N(c) \), is defined as an interval containing \( c \) with a certain radius or distance \( \epsilon > 0 \). This interval is typically denoted as \( (c - \epsilon, c + \epsilon) \).
+
+Mathematically, the neighborhood \( N(c) \) is defined as:
+
+\[ N(c) = \{ x \in \text{Domain of } f \mid 0 < |x - c| < \epsilon \} \]
+
+Here, \( |x - c| \) denotes the distance between \( x \) and \( c \) on the real number line.
+
+In the context of limits, considering the neighborhood of a point \( c \) is crucial for understanding the behavior of a function \( f(x) \) as \( x \) approaches \( c \). When we say that the limit of \( f(x) \) as \( x \) approaches \( c \) exists and equals \( L \), we mean that for any positive value of \( \epsilon \), there exists a positive value of \( \delta \) such that if \( x \) is within the neighborhood of \( c \) defined by \( 0 < |x - c| < \delta \), then \( f(x) \) will be within a certain range of \( L \), defined by \( |f(x) - L| < \epsilon \).
+
+In essence, considering the neighborhood of a point allows us to precisely define the proximity in which the function's values correspond to a specific limit value as \( x \) approaches that point. This concept forms the foundation of the epsilon-delta definition of limits, which provides a rigorous framework for understanding the behavior of functions in calculus.
+
+
+\section{Epsilon-Delta definition of Limits}
+
+This is a rigorous formulation of limits that can be used to examine the existence and value of the limits for a general function. 
+
+In this definition, we say that the limit of a function \( f(x) \) as \( x \) approaches a point \( c \) equals \( L \), denoted as \( \lim_{x \to c} f(x) = L \), if for every positive value of \( \epsilon \), there exists a corresponding positive value of \( \delta \) such that if \( x \) is within the neighborhood of \( c \) defined by \( 0 < |x - c| < \delta \), then \( f(x) \) is within a certain range of \( L \) defined by \( |f(x) - L| < \epsilon \).
+
+Mathematically, this can be expressed as follows:
+
+\begin{outline}
+For every \( \epsilon > 0 \), there exists \( \delta > 0 \) such that for all \( x \) in the domain of \( f \), if \( 0 < |x - c| < \delta \), then \( |f(x) - L| < \epsilon \).
+\end{outline}
+
+This definition emphasizes the idea that as \( x \) approaches \( c \), the values of \( f(x) \) get arbitrarily close to \( L \), provided \( x \) is sufficiently close to \( c \). The choice of \( \epsilon \) determines the size of the acceptable range around \( L \). At the same time, the corresponding \( \delta \) specifies the range of \( x \) values around \( c \) that guarantee \( f(x) \) remains within that range.
+
+
+In the case of multivariable calculus, we see that this notion of distance will change, and we will see more and more complicated definitions for limits. 
+
+\section{Left hand and Right hand limits}
+In calculus, the left-hand limit and right-hand limit are concepts that describe the behavior of a function as it approaches a certain point from the left or from the right, respectively. These limits help to understand the behavior of functions at specific points, especially when the function may not be defined at that point.
+
+\begin{enumerate}
+  \item \textbf{Left-Hand Limit (LHL):}
+  The left-hand limit of a function \( f(x) \) as \( x \) approaches a particular value \( c \), denoted as \( \lim_{x \to c^-} f(x) \), represents the behavior of the function as \( x \) approaches \( c \) from the left side (values of \( x \) less than \( c \)).
+
+  Mathematically, if \( \lim_{x \to c^-} f(x) = L \), it means that as \( x \) approaches \( c \) from the left side, the values of \( f(x) \) get arbitrarily close to \( L \).
+
+  Example:
+  Consider the function \( f(x) = \frac{1}{x} \). Let's find \( \lim_{x \to 0^-} f(x) \):
+  \[ \lim_{x \to 0^-} \frac{1}{x} = -\infty \]
+  This indicates that as \( x \) approaches \( 0 \) from the left, the function values become increasingly negative without bound.
+
+  \item \textbf{Right-Hand Limit (RHL):}
+  The right-hand limit of a function \( f(x) \) as \( x \) approaches a particular value \( c \), denoted as \( \lim_{x \to c^+} f(x) \), represents the behavior of the function as \( x \) approaches \( c \) from the right side (values of \( x \) greater than \( c \)).
+
+  Mathematically, if \( \lim_{x \to c^+} f(x) = L \), it means that as \( x \) approaches \( c \) from the right side, the values of \( f(x) \) get arbitrarily close to \( L \).
+
+  Example:
+  Consider the function \( f(x) = \frac{1}{x} \). Let's find \( \lim_{x \to 0^+} f(x) \):
+  \[ \lim_{x \to 0^+} \frac{1}{x} = +\infty \]
+  This indicates that as \( x \) approaches \( 0 \) from the right, the function values become increasingly positive without bounds. 
+
+\end{enumerate}
+
+These concepts are crucial in understanding the continuity of functions and defining derivatives in calculus. \textbf{Now, the overall limit of a function at a point is only defined if the left-hand and right-hand limit are the same}. Similarly, in higher dimensions, the limits are only defined for a point if it is the same, irrespective of the path taken to approach the point. 
+
+
+
+\section{Indeterminate forms}
+
+Indeterminate forms are common in real-world problems across various disciplines. For instance, in epidemiology, analyzing disease spread may lead to \(\frac{0}{0}\) forms when studying infection rates. Similarly, finance encounters \(\frac{\infty}{\infty}\) forms when dealing with compound interest calculations. In physics, calculating velocity and acceleration can result in \(\frac{0}{0}\) forms. These examples underscore the need for mastering limits to resolve such ambiguities and obtain meaningful insights.
+
+
+Mastery of limits is essential for handling indeterminate forms because it equips us with the tools to navigate complex mathematical situations where straightforward evaluation is impossible. Indeterminate forms often arise when evaluating limits of functions in various contexts, highlighting the need for a deep understanding of limit concepts and techniques.
+
+Consider, for instance, the limit \( \lim_{x \to \infty} \frac{x^2 + 3x}{2x^2 - 5} \). Direct substitution of \( x = \infty \) results in \( \frac{\infty^2 + 3\cdot \infty}{2\cdot \infty^2 - 5} = \frac{\infty}{\infty} \), an indeterminate form. However, by employing limit properties or applying algebraic manipulation, we can rewrite the expression to \( \lim_{x \to \infty} \frac{x^2 + 3x}{2x^2 - 5} = \lim_{x \to \infty} \frac{1 + \frac{3}{x}}{2 - \frac{5}{x^2}} = \frac{1}{2} \), revealing the actual limit value.
+
+
+

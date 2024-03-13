@@ -1,0 +1,115 @@
+\chapter{Introduction-motivation}
+
+Now, we have discussed differentials in one variable in detail. Now, given there is a quantity that is a function of an independent variable, we could calculate the rate of change of the quantity concerning the change in the independent variable.
+
+But now, we can ask ourselves, can we do the reverse? The answer is, well, yes. But only sometimes in an analytical manner. The basic knowledge of integrals starts from there. 
+
+Integral is the reverse of differentiation in the mathematical sense. It has a helpful geometric intuition also. As the differentiation represents the slope of the graph of a function, integral represents the area under the curve of a function.
+
+In a sense, it sums up the small changes that happened(expressed as differentials) and gives out the total change or the total effect of the changes that were made. 
+
+\section*{History of Integral Calculus}
+
+Integral calculus, a branch of mathematics, has a rich and fascinating history that spans thousands of years. Its development can be traced back to ancient civilizations such as the Babylonians, Egyptians, and Greeks.
+
+\begin{enumerate}
+    \item \textbf{Antiquity}: The Babylonians and Egyptians made early attempts at calculating areas and volumes. They developed basic methods for finding areas of simple shapes like squares, rectangles, and triangles. The ancient Greeks, particularly Eudoxus and Archimedes, made significant contributions to the concept of integration. Archimedes, for instance, used a method similar to what we now call the method of exhaustion to approximate the area under a curve.
+    
+    \item \textbf{Foundations in Antiquity and Middle Ages}: During the Middle Ages, European mathematicians such as Johannes Kepler and Bonaventura Cavalieri continued to explore methods for finding areas and volumes. However, the formalization of integral calculus as we know it today began with the work of thinkers like Isaac Barrow, Pierre de Fermat, and René Descartes.
+    
+    \item \textbf{17th Century}: The true birth of integral calculus is often attributed to the work of Isaac Newton and Gottfried Wilhelm Leibniz in the 17th century. Independently, both Newton and Leibniz developed what is now known as the fundamental theorem of calculus, which relates to differentiation and integration. Newton used his method of fluxions, which was based on the idea of instantaneous rates of change. At the same time, Leibniz introduced the integral symbol ($\int$) and developed a notation system that is still in use today.
+    
+    \item \textbf{18th Century}: The 18th century saw significant advancements in integral calculus, with mathematicians like Leonhard Euler and Joseph-Louis Lagrange making essential contributions. Euler, in particular, expanded the scope of calculus by applying it to various fields such as physics, engineering, and number theory.
+    
+    \item \textbf{Rigorous Foundations}: The 19th century witnessed the development of more rigorous foundations for integral calculus, mainly through the work of mathematicians like Augustin-Louis Cauchy and Karl Weierstrass. They worked on clarifying the concepts of limits and continuity, which are essential for understanding integrals.
+    
+    \item \textbf{Modern Developments}: In the 20th and 21st centuries, integral calculus continued to evolve, with advancements in measure theory, functional analysis, and complex analysis. Today, integral calculus is crucial in various fields, including physics, engineering, economics, and computer science.
+\end{enumerate}
+
+Throughout its history, integral calculus has undergone numerous refinements and developments. Still, its fundamental principles remain deeply rooted in ancient civilizations' work and mathematicians' pioneering efforts over the centuries.
+
+\section{Uses}
+
+Just like differential calculus, integral calculus is a very important part of solving real-world problems. 
+
+\section*{Uses of Integral Calculus}
+
+Integral calculus finds applications across various fields due to its versatility and power. Some of its common uses include:
+
+\begin{enumerate}
+    \item \textbf{Physics}: Integral calculus is extensively used in physics for solving problems related to motion, forces, energy, electricity, magnetism, and fluid dynamics. For example, calculating work done by a force, finding the center of mass of a system, determining heat transfer, and analyzing mass distribution in solid objects all involve integral calculus.
+    
+    \item \textbf{Engineering}: Engineers utilize integral calculus to design and analyze systems and structures. Applications include calculating areas, volumes, centroids, moments of inertia, and determining flow rates in fluid mechanics. Electrical engineers use integral calculus to analyze circuits and signals.
+    
+    \item \textbf{Economics and Finance}: Integral calculus plays a crucial role in economic and financial modeling, particularly in optimization problems such as maximizing profit or minimizing cost functions. It is also used in calculating areas under demand and supply curves to determine consumer and producer surplus.
+    
+    \item \textbf{Statistics}: Integral calculus is essential in probability theory and statistics for calculating probabilities, expected values, cumulative distribution functions, and probability density functions. It is used in statistical inference, hypothesis testing, and curve fitting.
+    
+    \item \textbf{Computer Science}: In computer science, integral calculus is applied in numerical analysis and algorithms for solving differential equations, optimization problems, and simulating dynamic systems. It is also used in image processing, data compression, and machine learning algorithms.
+    
+    \item \textbf{Medicine and Biology}: Integral calculus is used in modeling biological processes such as population growth, spread of diseases, pharmacokinetics, and enzyme kinetics. In medicine, it is applied in analyzing medical imaging data such as MRI and CT scans and in understanding physiological processes.
+    
+    \item \textbf{Geography and Geology}: Integral calculus is used in analyzing terrain features, calculating landform volumes, and determining erosion and sedimentation rates. It is also applied in geophysical modeling and studying the Earth's gravitational field.
+    
+    \item \textbf{Chemistry}: Chemists use integral calculus to analyze reaction kinetics, determine reaction rates, and calculate concentrations over time. It is also employed in spectroscopy, chromatography, and thermodynamics.
+\end{enumerate}
+
+These are just a few examples of the many applications of integral calculus. Its versatility and power make it a fundamental tool in scientific and engineering disciplines, contributing to the advancement of technology and our understanding of the natural world.
+
+
+\section{Integrals as area}
+
+Geometrically, integration can be thought of as finding the area under a curve. Consider a function \( f(x) \) defined over some interval \([a, b]\) on the x-axis. This is more appropriate for definite integrals, but indefinite integrals are just a way of getting there. 
+
+\begin{enumerate}
+    \item \textbf{Rectangular Approximation}: One intuitive approach is to approximate the area under the curve using rectangles. You can divide the interval \([a, b]\) into smaller subintervals and construct rectangles whose heights are determined by the function values at certain points within each subinterval. As you increase the number of rectangles and make their widths smaller (approaching zero), this approximation becomes more accurate.
+    
+    \item \textbf{Limiting Process}: To find the exact area under the curve, you need to take the limit as the width of the rectangles approaches zero. This limit process involves partitioning the interval \([a, b]\) into infinitely many subintervals and summing the areas of the rectangles corresponding to each subinterval. The width of each rectangle becomes infinitesimally small, and the sum becomes an integral.
+    
+    \item \textbf{Riemann Sum}: The integral of \( f(x) \) over the interval \([a, b]\) represents the limit of the Riemann sum as the width of the rectangles approaches zero. Mathematically, this can be represented as:
+    
+    \[ \int_{a}^{b} f(x) \, dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^*) \cdot \Delta x \]
+    
+    where \( \Delta x \) is the width of each subinterval, \( x_i^* \) is a sample point within the \( i \)th subinterval, and \( n \) represents the number of subintervals.
+    
+    \item \textbf{Graphical Interpretation}: Geometrically, the integral of \( f(x) \) over \([a, b]\) represents the signed area between the curve \( y = f(x) \) and the x-axis within the interval \([a, b]\). If \( f(x) \) is above the x-axis, the area is counted positively, and if \( f(x) \) is below the x-axis, the area is counted negatively. The integral gives the net area.
+    
+    \item \textbf{Antiderivative}: Another geometric interpretation comes from the Fundamental Theorem of Calculus, which states that if \( F(x) \) is an antiderivative of \( f(x) \) on \([a, b]\), then:
+    
+    \[ \int_{a}^{b} f(x) \, dx = F(b) - F(a) \]
+    
+    This can be interpreted geometrically as the difference in the values of the antiderivative \( F(x) \) evaluated at the endpoints \( b \) and \( a \).
+\end{enumerate}
+
+In summary, integration geometrically represents finding the area under a curve, and it provides a powerful tool for solving problems related to accumulation, finding averages, computing volumes, and much more.
+
+
+
+\begin{tikzpicture}[scale=4]
+% Frame
+\draw[gray, thick] (-0.3,-0.3) rectangle (3.3,2.3);
+% Axes
+\draw[->] (-0.2,0) -- (3,0) node[right] {$x$};
+\draw[->] (0,-0.2) -- (0,2) node[above] {$y$};
+% Curve
+\draw[blue, thick, domain=0.2:2.8, smooth, variable=\x] plot ({\x}, {0.6*sin(3*\x r)+0.8});
+% Area under the curve
+\fill[pattern=north east lines, pattern color=gray] (0.2,0) -- plot[domain=0.2:2.8, smooth] ({\x}, {0.6*sin(3*\x r)+0.8}) -- (2.8,0) -- cycle;
+% Vertical lines
+\draw[dashed] (0.2,0) -- (0.2,0.6*sin(3*0.2 r)+0.8);
+\draw[dashed] (2.8,0) -- (2.8,0.6*sin(3*2.8 r)+0.8);
+% Labels
+\draw (0.2,-0.05) node[below] {$a$};
+\draw (2.8,-0.05) node[below] {$b$};
+\draw (1.5,1.3) node {$y = f(x)$};
+\draw (1.5,0.3) node {$A$};
+% Axis ticks
+\foreach \x in {0.2,0.4,...,2.8}
+    \draw (\x,0.05) -- (\x,-0.05);
+\foreach \y in {0.2,0.4,...,1.8}
+    \draw (0.05,\y) -- (-0.05,\y);
+\end{tikzpicture}
+
+\begin{center}
+    The picture of an integral represents the area under the curve. 
+\end{center}

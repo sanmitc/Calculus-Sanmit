@@ -1,0 +1,377 @@
+\section{Existence of a limit}
+
+Now that we know what a limit is, its definition, and some basic theory regarding where it arises and how it is used. Now, given specific examples, it is a matter of thought on how to calculate limits. 
+
+
+\textbf{Delta-Epsilon definition} for the existence of the limits is the most rigorous way to argue for the existence of limits and the value calculation. 
+
+
+\textbf{Example 1:}
+Calculate the limit of $f(x) = \frac{x^2 - 4}{x - 2}$ as $x$ approaches 2.
+
+\textbf{Solution:}
+Given function $f(x) = \frac{x^2 - 4}{x - 2}$, which is not defined at $x = 2$ due to division by zero.
+
+We want to show that the limit exists and find its value.
+
+\textbf{Proof:} 
+We want to show that for any $\epsilon > 0$, there exists a $\delta > 0$ such that if $0 < |x - 2| < \delta$, then $|f(x) - L| < \epsilon$, where $L$ is the limit.
+
+Let's simplify $f(x)$:
+\[
+f(x) = \frac{(x+2)(x-2)}{x-2} = x + 2
+\]
+
+Now, as $x$ approaches 2, $f(x)$ approaches 4.
+
+Given $\epsilon > 0$, let's choose $\delta = \epsilon$.
+
+Then, $|f(x) - 4| = |x + 2 - 4| = |x - 2| < \delta = \epsilon$, whenever $0 < |x - 2| < \delta$.
+
+Hence, the limit as $x$ approaches 2 of $f(x)$ is 4.
+
+\textbf{Example 2:}
+Calculate the limit of $g(x) = \sqrt{x}$ as $x$ approaches 0.
+
+\textbf{Solution:}
+Given function $g(x) = \sqrt{x}$, which is not defined at $x = 0$ for non-positive real numbers.
+
+We want to show that the limit exists and find its value.
+
+\textbf{Proof:} 
+We want to show that for any $\epsilon > 0$, there exists a $\delta > 0$ such that if $0 < |x - 0| < \delta$, then $|g(x) - L| < \epsilon$, where $L$ is the limit.
+
+Notice that $g(x)$ is defined only for $x \geq 0$. As $x$ approaches 0 from the positive side, $\sqrt{x}$ approaches 0.
+
+Given $\epsilon > 0$, let's choose $\delta = \epsilon^2$.
+
+Then, $|g(x) - 0| = |\sqrt{x} - 0| = \sqrt{x} < \epsilon$, whenever $0 < x < \delta = \epsilon^2$.
+
+Hence, the limit as $x$ approaches 0 from the positive side of $g(x)$ is 0. But from the negative side it is not defined. That means the overall limit does not exist.
+
+\textbf{Example 3:}
+Calculate the limit of $h(x) = \frac{1}{x}$ as $x$ approaches 0.
+
+\textbf{Solution:}
+Given function $h(x) = \frac{1}{x}$, which is not defined at $x = 0$ due to division by zero.
+
+We want to show that the limit exists and find its value.
+
+\textbf{Proof:} 
+We want to show that for any $\epsilon > 0$, there exists a $\delta > 0$ such that if $0 < |x - 0| < \delta$, then $|h(x) - L| < \epsilon$, where $L$ is the limit.
+
+As $x$ approaches 0 from the right side, $\frac{1}{x}$ tends to positive infinity. Similarly, as $x$ approaches 0 from the left side, $\frac{1}{x}$ tends to negative infinity. Hence, the limit does not exist.
+
+These examples illustrate how to use the delta-epsilon method to argue for the existence of limits and calculate them for functions that are not defined at certain points.
+
+
+
+
+\subsection{Limit does not exist if Right and Left hand limits are not the same}
+
+As we argued before, existence of the overall limit requires the existence and equality of LHL and RHL.
+
+\textbf{Example 1:} \\
+Consider the function $f(x) = \frac{|x|}{x}$ (also known as the signum function).
+
+This function is defined as:
+
+\[ f(x) = \begin{cases} 
+1 & \text{if } x > 0 \\
+0 & \text{if } x = 0 \\
+-1 & \text{if } x < 0 
+\end{cases} \]
+
+The right-hand limit as $x$ approaches 0 is 1 because $f(x)$ approaches 1 as $x$ approaches 0 from the positive side.
+
+The left-hand limit as $x$ approaches 0 is -1 because $f(x)$ approaches -1 as $x$ approaches 0 from the negative side.
+
+Since the left-hand and right-hand limits are different, the limit of $f(x)$ as $x$ approaches 0 does not exist.
+
+\textbf{Example 2:} \\
+Consider the function $g(x) = \sin\left(\frac{1}{x}\right)$.
+
+As $x$ approaches 0, $\frac{1}{x}$ approaches positive or negative infinity. Hence, $\sin\left(\frac{1}{x}\right)$ oscillates infinitely between -1 and 1, and the limit as $x$ approaches 0 does not exist because the function does not approach a single value.
+
+\textbf{Example 3:} \\
+Consider the function $h(x) = \frac{\sin x}{x}$.
+
+As $x$ approaches 0, $\frac{\sin x}{x}$ approaches 1 (by L'Hôpital's Rule or the Squeeze Theorem). However, this approach is from the right side of 0. If we consider the left-hand limit, it will also approach 1. Hence, the limit exists in this case.
+
+\textbf{Example 4:} \\
+Consider the function $k(x) = \frac{\sin x}{|x|}$.
+
+As $x$ approaches 0 from the positive side, $\frac{\sin x}{|x|}$ approaches 1. However, as $x$ approaches 0 from the negative side, $\frac{\sin x}{|x|}$ also approaches -1. Since the left-hand and right-hand limits are different, the limit of $k(x)$ as $x$ approaches 0 does not exist.
+
+These examples illustrate functions where the limit does not exist because the left-hand and right-hand limits approach different values.
+
+
+\textbf{A famous example of this kind of function is also the greatest integer function.}
+
+
+\section{Calculation of Limits: Algebraic Expressions}
+
+\textbf{For calculating limits of complex algebraic expressions, we must break these expressions down into algebraic combinations of smaller and simpler expressions to calculate the overall limit. Thus, we require the formulae for an algebraic combination of limits.}
+
+\textbf{Sum Rule:} If $\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} g(x) = M$, then
+\[ \lim_{x \to c} (f(x) + g(x)) = L + M \]
+
+\textbf{Proof:} \begin{outline}
+Let $\epsilon > 0$ be given. Since $\lim_{x \to c} f(x) = L$, there exists $\delta_1 > 0$ such that if $0 < |x - c| < \delta_1$, then $|f(x) - L| < \frac{\epsilon}{2}$.
+Similarly, since $\lim_{x \to c} g(x) = M$, there exists $\delta_2 > 0$ such that if $0 < |x - c| < \delta_2$, then $|g(x) - M| < \frac{\epsilon}{2}$.
+
+Choose $\delta = \min(\delta_1, \delta_2)$. Then for $0 < |x - c| < \delta$:
+\[ |(f(x) + g(x)) - (L + M)| = |(f(x) - L) + (g(x) - M)| \]
+\[ \leq |f(x) - L| + |g(x) - M| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \]
+
+Thus, $\lim_{x \to c} (f(x) + g(x)) = L + M$.
+
+\end{outline} \vspace{1cm} \hline
+
+\textbf{Difference Rule:} If $\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} g(x) = M$, then
+\[ \lim_{x \to c} (f(x) - g(x)) = L - M \]
+
+Suppose $\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} g(x) = M$. We want to prove that $\lim_{x \to c} (f(x) - g(x)) = L - M$.
+
+\textbf{Proof:} \begin{outline} 
+Let $\epsilon > 0$ be given. Since $\lim_{x \to c} f(x) = L$, there exists $\delta_1 > 0$ such that if $0 < |x - c| < \delta_1$, then $|f(x) - L| < \frac{\epsilon}{2}$.
+Similarly, since $\lim_{x \to c} g(x) = M$, there exists $\delta_2 > 0$ such that if $0 < |x - c| < \delta_2$, then $|g(x) - M| < \frac{\epsilon}{2}$.
+
+Choose $\delta = \min(\delta_1, \delta_2)$. Then for $0 < |x - c| < \delta$:
+\[ |(f(x) - g(x)) - (L - M)| = |(f(x) - L) - (g(x) - M)| \]
+\[ \leq |f(x) - L| + |g(x) - M| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \]
+
+Thus, $\lim_{x \to c} (f(x) - g(x)) = L - M$.
+
+\end{outline} \vspace{1cm} \hline
+
+
+\textbf{Constant Multiple Rule:} If $\lim_{x \to c} f(x) = L$, then for any constant $k$,
+\[ \lim_{x \to c} (kf(x)) = kL \]
+
+\textbf{Proof:} \begin{outline} 
+Let $\epsilon > 0$ be given. Since $\lim_{x \to c} f(x) = L$, there exists $\delta > 0$ such that if $0 < |x - c| < \delta$, then $|f(x) - L| < \frac{\epsilon}{|k|}$.
+
+Now, consider $|(kf(x)) - kL| = |k(f(x) - L)|$. Since $|k|$ is a constant, we can rewrite this as $|k| \cdot |f(x) - L|$.
+
+By choosing $\delta$ appropriately, we can ensure that $|f(x) - L| < \frac{\epsilon}{|k|}$, and thus $|(kf(x)) - kL| < |k| \cdot \frac{\epsilon}{|k|} = \epsilon$ for $0 < |x - c| < \delta$.
+
+Hence, $\lim_{x \to c} (kf(x)) = kL$.
+
+
+\end{outline} \vspace{1cm} \hline
+
+
+\textbf{Product Rule:} If $\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} g(x) = M$, then
+\[ \lim_{x \to c} (f(x) \cdot g(x)) = L \cdot M \]
+
+\textbf{Proof:} \begin{outline}
+Let $\epsilon > 0$ be given. Since $\lim_{x \to c} f(x) = L$, there exists $\delta_1 > 0$ such that if $0 < |x - c| < \delta_1$, then $|f(x) - L| < \frac{\epsilon}{2|M|}$.
+Similarly, since $\lim_{x \to c} g(x) = M$, there exists $\delta_2 > 0$ such that if $0 < |x - c| < \delta_2$, then $|g(x) - M| < \frac{\epsilon}{2|L|}$.
+
+Choose $\delta = \min(\delta_1, \delta_2)$. Then for $0 < |x - c| < \delta$:
+\[ |(f(x) \cdot g(x)) - (L \cdot M)| = |f(x) \cdot g(x) - L \cdot M| \]
+\[ = |f(x) \cdot g(x) - f(x) \cdot M + f(x) \cdot M - L \cdot M| \]
+\[ = |f(x) \cdot (g(x) - M) + (f(x) - L) \cdot M| \]
+\[ \leq |f(x)| \cdot |g(x) - M| + |f(x) - L| \cdot |M| \]
+\[ < |L + \frac{\epsilon}{2|M|}| \cdot |g(x) - M| + |f(x) - L| \cdot |M| \]
+\[ < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \] \quad \text{ignoring $\epsilon^2$ contribution.}
+
+Thus, $\lim_{x \to c} (f(x) \cdot g(x)) = L \cdot M$.
+
+\end{outline} \vspace{1cm} \hline
+
+
+\textbf{Quotient Rule:} If $\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} g(x) = M$, and $M \neq 0$, then
+\[ \lim_{x \to c} \left(\frac{f(x)}{g(x)}\right) = \frac{L}{M} \]
+
+\textbf{Proof:} \begin{outline}
+Given $\lim_{x \to c} f(x) = L$, we have
+\[ \forall \epsilon_1 > 0, \exists \delta_1 > 0 \text{ such that } 0 < |x - c| < \delta_1 \implies |f(x) - L| < \epsilon_1 \]
+
+Similarly, given $\lim_{x \to c} g(x) = M$, we have
+\[ \forall \epsilon_2 > 0, \exists \delta_2 > 0 \text{ such that } 0 < |x - c| < \delta_2 \implies |g(x) - M| < \epsilon_2 \]
+
+Since $M \neq 0$, we can choose $\epsilon_2 = \frac{|M|}{2} > 0$, ensuring that $g(x) \neq 0$ in some punctured neighborhood around $c$. Thus, we can define $\delta = \min(\delta_1, \delta_2)$.
+
+Now, consider $\left|\frac{f(x)}{g(x)} - \frac{L}{M}\right| = \left|\frac{f(x) \cdot M - g(x) \cdot L}{g(x) \cdot M}\right|$.
+
+For $0 < |x - c| < \delta$, by the triangle inequality, we have
+\[ \left|\frac{f(x)}{g(x)} - \frac{L}{M}\right| = \frac{|f(x) \cdot M - g(x) \cdot L|}{|g(x) \cdot M|} \]
+\[ \leq \frac{|f(x) \cdot M - L \cdot M| + |L \cdot M - g(x) \cdot L|}{|g(x) \cdot M|} \]
+\[ = \frac{|(f(x) - L) \cdot M + L \cdot (M - g(x))|}{|g(x) \cdot M|} \]
+
+Now, since $0 < |x - c| < \delta$, we have $|f(x) - L| < \epsilon_1$ and $|g(x) - M| < \epsilon_2$, yielding:
+\[ |(f(x) - L) \cdot M| < \epsilon_1 \cdot |M| \]
+\[ |L \cdot (M - g(x))| < |L| \cdot \epsilon_2 \]
+
+Hence,
+\[ \frac{|f(x)}{g(x)} - \frac{L}{M} < \frac{\epsilon_1 \cdot |M| + |L| \cdot \epsilon_2}{|M|^2} \]
+
+We can choose $\epsilon_1$ and $\epsilon_2$ such that $\epsilon_1 \cdot |M| + |L| \cdot \epsilon_2 < \epsilon|M|^2$. Therefore, for all $\epsilon > 0$, there exists $\delta > 0$ such that for $0 < |x - c| < \delta$:
+\[ \left|\frac{f(x)}{g(x)} - \frac{L}{M}\right| < \epsilon \]
+
+Hence, by the delta-epsilon definition of a limit, $\lim_{x \to c} \left(\frac{f(x)}{g(x)}\right) = \frac{L}{M}$.
+
+\end{outline} \vspace{1cm} \hline
+
+\textbf{Power Rule:} If $\lim_{x \to c} f(x) = L$, then for any natural number $n$,
+\[ \lim_{x \to c} (f(x))^n = L^n \]
+
+\textbf{Proof:} \begin{outline}
+We'll use mathematical induction to prove the Power Rule.
+
+\textbf{Base Case:} $n = 1$
+In this case, $(f(x))^n = f(x)$. Since $\lim_{x \to c} f(x) = L$, it follows that $\lim_{x \to c} (f(x))^1 = L^1 = L$.
+
+\textbf{Inductive Hypothesis:}
+Assume that the Power Rule holds for some natural number $k$, i.e., $\lim_{x \to c} (f(x))^k = L^k$.
+
+\textbf{Inductive Step:} $k \rightarrow k+1$
+Consider $(f(x))^{k+1} = (f(x))^k \cdot f(x)$. By the Inductive Hypothesis, $\lim_{x \to c} (f(x))^k = L^k$, and we know that $\lim_{x \to c} f(x) = L$.
+
+By the Product Rule, $\lim_{x \to c} (f(x))^k \cdot f(x) = \lim_{x \to c} (f(x))^k \cdot \lim_{x \to c} f(x) = L^k \cdot L = L^{k+1}$.
+
+Hence, by induction, the Power Rule holds for all natural numbers $n$.
+
+\end{outline} \vspace{1cm} \hline
+
+\textbf{Root Rule:} If $\lim_{x \to c} f(x) = L$ and $n$ is a positive integer, then
+\[ \lim_{x \to c} \sqrt[n]{f(x)} = \sqrt[n]{L} \]
+
+\textbf{Proof:} \begin{outline}
+Consider the function $g(x) = \sqrt[n]{f(x)}$. We need to show that $\lim_{x \to c} g(x) = \sqrt[n]{L}$.
+
+For any $\epsilon > 0$, since $\lim_{x \to c} f(x) = L$, there exists $\delta > 0$ such that $|f(x) - L| < \epsilon^n$ whenever $0 < |x - c| < \delta$.
+
+Now, consider $|g(x) - \sqrt[n]{L}| = |\sqrt[n]{f(x)} - \sqrt[n]{L}| = |\sqrt[n]{f(x)} - \sqrt[n]{L} \cdot \frac{\sqrt[n]{f(x)}^{n-1} + \sqrt[n]{L} \cdot \sqrt[n]{f(x)}^{n-2} + \ldots + \sqrt[n]{L}^{n-1}}{\sqrt[n]{f(x)}^{n-1} + \sqrt[n]{L} \cdot \sqrt[n]{f(x)}^{n-2} + \ldots + \sqrt[n]{L}^{n-1}}|$
+\[ = \frac{|f(x) - L|}{\sqrt[n]{f(x)}^{n-1} + \sqrt[n]{L} \cdot \sqrt[n]{f(x)}^{n-2} + \ldots + \sqrt[n]{L}^{n-1}} \]
+
+Since each term in the denominator is positive, we have:
+\[ |g(x) - \sqrt[n]{L}| < \frac{\epsilon^n}{n \cdot \epsilon^{n-1}} = \frac{\epsilon}{n} \]
+
+Choose $\epsilon = n \epsilon'$, then $|g(x) - \sqrt[n]{L}| < \frac{\epsilon}{n} = \frac{n \epsilon'}{n} = \epsilon'$.
+
+Thus, $\lim_{x \to c} g(x) = \sqrt[n]{L}$.
+
+\end{outline} \vspace{1cm} \hline
+
+\textbf{Composition Rule:} If $\lim_{x \to c} g(x) = L$ and $\lim_{y \to L} f(y) = M$, then
+\[ \lim_{x \to c} f(g(x)) = M \]
+
+\textbf{Proof:} \begin{outline}
+Given $\lim_{x \to c} g(x) = L$, for any $\epsilon_1 > 0$, there exists $\delta_1 > 0$ such that $0 < |x - c| < \delta_1$ implies $|g(x) - L| < \epsilon_1$.
+
+Similarly, given $\lim_{y \to L} f(y) = M$, for any $\epsilon_2 > 0$, there exists $\delta_2 > 0$ such that $0 < |y - L| < \delta_2$ implies $|f(y) - M| < \epsilon_2$.
+
+Now, consider $|f(g(x)) - M|$, $\delta_2=\epsilon_1$. Since $g(x)$ approaches $L$ as $x$ approaches $c$, there exists $\delta_1 > 0$ such that $0 < |x - c| < \delta_1$ implies $|f(g(x)) - M| < \epsilon_2$.
+
+Hence, $\lim_{x \to c} f(g(x)) = M$.
+
+\end{outline} \vspace{1cm} \hline
+
+These laws are fundamental in evaluating the limits of functions using algebraic manipulation. They allow us to simplify complex expressions and find limits more easily by breaking them down into simpler parts.
+
+
+\section{Calculation of Limits: The sandwich theorem.}
+
+This theorem helps us in bounding the expressions through functions that have a known limit.
+
+\subsection*{Statement:}
+Suppose $f(x)$, $g(x)$, and $h(x)$ are functions defined on an interval containing $x = c$, except possibly at $x = c$ itself. If there exists an interval around $c$ where $g(x) \leq f(x) \leq h(x)$ for all $x$ in the interval (except possibly at $x = c$), and if $\lim_{x \to c} g(x) = \lim_{x \to c} h(x) = L$, then $\lim_{x \to c} f(x) = L$.
+
+\subsection*{Proof:}
+Let $\epsilon > 0$ be given. Since $\lim_{x \to c} g(x) = \lim_{x \to c} h(x) = L$, there exist $\delta_1 > 0$ and $\delta_2 > 0$ such that for all $x$ in the interval $0 < |x - c| < \delta_1$, we have $|g(x) - L| < \epsilon$ and for all $x$ in the interval $0 < |x - c| < \delta_2$, we have $|h(x) - L| < \epsilon$.
+
+Now, consider the interval $0 < |x - c| < \min(\delta_1, \delta_2)$. Within this interval, we have $g(x) \leq f(x) \leq h(x)$. 
+
+Thus, for all $x$ in the interval $0 < |x - c| < \min(\delta_1, \delta_2)$, we have $|f(x) - L| \leq \max(|g(x) - L|, |h(x) - L|) < \epsilon$.
+
+Therefore, by the definition of a limit, $\lim_{x \to c} f(x) = L$.
+
+This completes the proof of the Sandwich Theorem.
+
+\section{Calcuating Limits: Through Taylor expansions}
+
+Calculating limits using Taylor expansion is a powerful technique in calculus that allows us to approximate the behavior of a function near a particular point. The Taylor expansion, also known as the Taylor series, represents a function as an infinite sum of terms involving its derivatives evaluated at that point. By truncating this series to a finite number of terms, we can obtain increasingly accurate approximations of the function.
+
+To calculate a limit using Taylor expansion, we first identify the point around which we want to evaluate the limit. Then, we express the function as a Taylor series centered at that point. This involves finding and evaluating the function's derivatives at the chosen point. By including higher-order terms in the series, we can improve the accuracy of our approximation.
+
+Once we have the Taylor series representation of the function, we can manipulate it to simplify the expression and isolate the terms relevant to our limit calculation. Often, this involves canceling out terms or combining them to form familiar patterns that allow us to evaluate the limit directly.
+
+Taylor expansion is particularly useful when dealing with functions that are not easily evaluable at a given point using direct substitution or other algebraic techniques. It provides a systematic method for approximating such functions' behavior and precision in determining their limits. However, it's important to remember that the Taylor series are only valid within a certain radius of convergence, and their accuracy may diminish as we move further away from the center of expansion. These complication arises in real -life computational processes. 
+
+\subsection*{Formal Definition of a Taylor Series:}
+Let \( f(x) \) be a function that is infinitely differentiable at a point \( x = c \). The Taylor series of \( f(x) \) centered at \( x = c \) is given by:
+\[ f(x) = f(c) + f'(c)(x-c) + \frac{f''(c)}{2!}(x-c)^2 + \frac{f'''(c)}{3!}(x-c)^3 + \cdots \]
+\[ = \sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!}(x-c)^n \]
+
+\subsection*{Taylor Expansions of Popular Functions:}
+\begin{enumerate}
+    \item \textbf{Exponential Function} \( e^x \):
+    \[ e^x = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \cdots = \sum_{n=0}^{\infty} \frac{x^n}{n!} \]
+    
+    \item \textbf{Trigonometric Functions:}
+       \begin{itemize}
+            \item \textbf{Sine Function} \( \sin(x) \):
+            \[ \sin(x) = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} \]
+            
+            \item \textbf{Cosine Function} \( \cos(x) \):
+            \[ \cos(x) = 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \cdots = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!} \]
+
+            \item \textbf{Tangent Function} \( \tan(x) \):
+    \[ \tan(x) = x + \frac{x^3}{3} + \frac{2x^5}{15} + \frac{17x^7}{315} + \cdots = \sum_{n=1}^{\infty} \frac{B_{2n}(-4)^n(1-4^n)x^{2n-1}}{(2n)!} \]
+    where \( B_{2n} \) denotes the \( (2n) \)th Bernoulli number.
+       \end{itemize}
+
+       
+       
+    \item \textbf{Natural Logarithm} \( \ln(1+x) \):
+    \[ \ln(1+x) = x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \cdots = \sum_{n=1}^{\infty} (-1)^{n+1} \frac{x^n}{n} \]
+    
+    \item \textbf{Geometric Series} \( \frac{1}{1-x} \) (for \( |x| < 1 \)):
+    \[ \frac{1}{1-x} = 1 + x + x^2 + x^3 + \cdots = \sum_{n=0}^{\infty} x^n \]
+    
+    
+\end{enumerate}
+
+
+\section{Calculating Limits:L'Hôpital's Rule}
+
+
+L'Hôpital's Rule is a fundamental theorem in calculus that provides a method for evaluating limits involving indeterminate forms. Specifically, it addresses cases where the numerator and denominator of a fraction approach zero or infinity as the variable approaches a particular value. In such situations, direct substitution fails to provide a definitive answer, and L'Hôpital's Rule offers an alternative approach.
+
+\subsection*{Usage:}
+
+The rule states that if \( \lim_{x \to c} \frac{f(x)}{g(x)} \) has the indeterminate form \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \), where \( f(x) \) and \( g(x) \) are differentiable functions, then:
+\[ \lim_{x \to c} \frac{f(x)}{g(x)} = \lim_{x \to c} \frac{f'(x)}{g'(x)} \]
+
+In other words, to evaluate the limit of the original function, we can instead take the limit of the ratio of the derivatives of \( f(x) \) and \( g(x) \). This process can be repeated iteratively, if necessary until the limit is determinable.
+
+\subsection*{When It Is Beneficial:}
+
+\begin{enumerate}
+    \item \textbf{Indeterminate Forms:} L'Hôpital's Rule is instrumental when dealing with limits that result in indeterminate forms \( \frac{0}{0} \) or \( \frac{\infty}{\infty} \).
+   
+    \item \textbf{Complex Functions:} It simplifies the evaluation of limits involving complex functions, especially when direct substitution or other methods are impractical.
+    
+    \item \textbf{Rigorous Analysis:} L'Hôpital's Rule provides a rigorous method for evaluating limits, especially in cases where algebraic manipulation or other techniques are insufficient.
+\end{enumerate}
+
+\subsection*{Conclusion:}
+
+L'Hôpital's Rule is a powerful tool in calculus for resolving limits involving indeterminate forms. Its systematic approach allows for easy evaluation of complex functions, providing a valuable tool for both theoretical analysis and practical computations in calculus and related fields. However, caution must be exercised, as misuse or application in inappropriate contexts can lead to incorrect results.
+
+
+\section{Computing Limits(?): A computational standpoint}
+
+
+\textbf{Now, given the mathematical tricks and tools that we will need to solve the limits, we must look at some basic computational methods enacted to compute the limits.}
+
+How would you calculate the limit of a function if you are given the form of the function? For a computer, a function takes some inputs and spews out some output that is useful to us. 
+
+Now, if we are asked what the limit of a function will be, we might approach that particular point slowly and track the changes in the function. We can now functionalize the delta-epsilon definition and also look for the observation that if the x changes slightly towards the desired point, then whether the change in f(x) becomes smaller or not. \textbf{We can then set a tolerance, and if the infinitesimal change in f(x) with the change in x becomes less than that, we can conclude that a limit is approaching. From a practical standpoint, that is fair enough, although it is not very accurate in the rigorous sense.
+
+
+
+

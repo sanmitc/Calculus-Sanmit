@@ -1,0 +1,223 @@
+Before Moving on to the standard formulae of differentiation, we define the algebraic rules that bind differentiation. These, coupled with the first principles standard formulae of differentiation of simple functions, aid us in the process of calculating any differential of choice. 
+The rules are respectively:
+
+\begin{enumerate}
+    \item \textbf{Constant Rule}: The derivative of a constant function is zero.
+    \[
+    \frac{d}{dx}(c) = 0 \quad \text{where } c \text{ is a constant.}
+    \]
+
+    \item \textbf{Constant multiplication rule}: The derivative of a function multiplied by a constant is that constant multiplied by the derivative of the function.
+
+    \[
+    \frac{d}{dx}(cf(x)) = c\frac{d}{dx}f(x) \quad \text{where } c \text{ is a constant.}
+    \]
+    
+    \item \textbf{Sum Rule}: The derivative of the sum of two functions is the sum of their derivatives.
+    \[
+    \frac{d}{dx}(f(x) + g(x)) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
+    \]
+    
+    \item \textbf{Difference Rule}: The derivative of the difference of two functions is the difference of their derivatives.
+    \[
+    \frac{d}{dx}(f(x) - g(x)) = \frac{d}{dx}f(x) - \frac{d}{dx}g(x)
+    \]
+    
+    \item \textbf{Product Rule}: The derivative of the product of two functions $f(x)$ and $g(x)$ is given by:
+    \[
+    \frac{d}{dx}(f(x) \cdot g(x)) = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+    \]
+    where $f'(x)$ and $g'(x)$ are the derivatives of $f(x)$ and $g(x)$ respectively.
+    
+    \item \textbf{Quotient Rule}: The derivative of the quotient of two functions $f(x)$ and $g(x)$ is given by:
+    \[
+    \frac{d}{dx}\left(\frac{f(x)}{g(x)}\right) = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{(g(x))^2}
+    \]
+    where $f'(x)$ and $g'(x)$ are the derivatives of $f(x)$ and $g(x)$ respectively, and $g(x) \neq 0$.
+    
+    \item \textbf{Chain Rule}: If $y = f(u)$ and $u = g(x)$, then the derivative of $y$ with respect to $x$ is given by:
+    \[
+    \frac{dy}{dx} = \frac{dy}{du} \cdot \frac{du}{dx}
+    \]
+    where $\frac{dy}{du}$ is the derivative of $f(u)$ with respect to $u$, and $\frac{du}{dx}$ is the derivative of $g(x)$ with respect to $x$.
+\end{enumerate}
+
+These rules form the basis for computing derivatives of more complex functions by breaking them down into simpler components.
+
+
+
+\subsection{\textbf{Proof of the Addition Rule:}}
+
+We want to prove:
+
+\[
+\frac{d}{dx}(f(x) + g(x)) = \frac{d}{dx}f(x) + \frac{d}{dx}g(x)
+\]
+
+Using the definition of the derivative:
+
+\[
+\lim_{{h \to 0}} \frac{(f(x + h) + g(x + h)) - (f(x) + g(x))}{h}
+\]
+
+Expanding the terms:
+
+\[
+\lim_{{h \to 0}} \frac{f(x + h) - f(x) + g(x + h) - g(x)}{h}
+\]
+
+Now, applying the definition of the derivative individually for \( f(x) \) and \( g(x) \):
+
+\[
+\lim_{{h \to 0}} \left(\frac{f(x + h) - f(x)}{h} + \frac{g(x + h) - g(x)}{h}\right)
+\]
+
+By the definition of the derivative, these are \( f'(x) \) and \( g'(x) \) respectively:
+
+\[
+\lim_{{h \to 0}} (f'(x) + g'(x))
+\]
+
+Thus, we have:
+
+\[
+\frac{d}{dx}(f(x) + g(x)) = f'(x) + g'(x)
+\]
+
+\textbf{Proof of the Subtraction Rule:}
+
+Similarly, for the subtraction rule, we have:
+
+\[
+\frac{d}{dx}(f(x) - g(x)) = \frac{d}{dx}f(x) - \frac{d}{dx}g(x)
+\]
+
+which can be proven by considering \( f(x) - g(x) \) instead of \( f(x) + g(x) \) and following the same steps.
+
+
+\subsection{Proof of multiplication rule}
+
+We want to prove:
+
+\[
+\frac{d}{dx}(f(x) \cdot g(x)) = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+\]
+
+Using the definition of the derivative:
+
+\[
+\lim_{{h \to 0}} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x)}{h}
+\]
+
+Expanding the terms:
+
+\[
+\lim_{{h \to 0}} \frac{f(x + h) \cdot g(x + h) - f(x) \cdot g(x + h) + f(x) \cdot g(x + h) - f(x) \cdot g(x)}{h}
+\]
+
+Now, applying the limit laws:
+
+\[
+\lim_{{h \to 0}} \left[\frac{f(x + h) \cdot (g(x + h) - g(x))}{h} + \frac{(f(x + h) - f(x)) \cdot g(x)}{h}\right]
+\]
+
+By the definition of the derivative, these are \( f'(x) \) and \( g'(x) \) respectively:
+
+\[
+\lim_{{h \to 0}} \left[f(x + h) \cdot g'(x) + f'(x) \cdot g(x)\right]
+\]
+
+Thus, we have:
+
+\[
+\frac{d}{dx}(f(x) \cdot g(x)) = f'(x) \cdot g(x) + f(x) \cdot g'(x)
+\]
+
+\subsection{Proof of Quotient rule}
+
+We do a similar trick here:
+$$
+\begin{aligned}
+q'(x) &= \lim_{h \to 0}\frac{q(x+h)-q(x)}{h} \\
+&= \lim_{h \to 0}\frac{\frac{f(x+h)}{g(x+h)}-\frac{f(x)}{g(x)}}{h} \\
+&= \lim_{h \to 0} \frac{f(x+h)g(x)-g(x+h)f(x)}{hg(x)g(x+h)} \\
+&= \lim_{h \to 0}\frac{f(x+h)g(x)-f(x)g(x)+f(x)g(x)-g(x+h)f(x)}{hg(x)g(x+h)} \\
+&= \lim_{h \to 0}\frac{\frac{f(x+h)g(x)-f(x)g(x)}{h}+\frac{f(x)g(x)-g(x+h)f(x)}{h}}{g(x)g(x+h)} \\
+&= \frac{g(x)\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}-f(x) \lim_{h \to 0}\frac{g(x+h)-g(x)}{h}}{g(x) \lim_{x \to 0}g(x+h)} \\
+&= \frac{g(x)f'(x)-f(x)g'(x)}{g^2(x)}
+\end{aligned}
+$$
+
+\subsection{Proof of chain rule}
+
+$$\begin{aligned}
+\frac{dy}{dx} &= \lim_{h \to 0} \frac{f(u(x+h)) - f(u(x))}{h} \\
+&= \lim_{h \to 0} \frac{f(u(x+h)) - f(u(x))}{u(x+h) - u(x)} \cdot \frac{u(x+h) - u(x)}{h} \\
+&= \lim_{h \to 0} f'(u(x)) \cdot \frac{u(x+h) - u(x)}{h} \\
+&= f'(u(x)) \cdot u'(x)
+\end{aligned}
+$$
+
+\subsection{Rule of Logarithmic differentiation}
+
+Given the function \( y = f(x)^{g(x)} \), take the natural logarithm of both sides:
+
+\[
+\ln(y) = \ln\left(f(x)^{g(x)}\right) = g(x) \cdot \ln\left(f(x)\right)
+\]
+
+Now, differentiate both sides with respect to \( x \):
+
+\[
+\frac{d}{dx}(\ln(y)) = \frac{d}{dx}(g(x) \cdot \ln(f(x)))
+\]
+
+Apply the chain rule on the right-hand side:
+
+\[
+\frac{1}{y} \cdot \frac{dy}{dx} = g'(x) \cdot \ln(f(x)) + g(x) \cdot \frac{d}{dx}(\ln(f(x)))
+\]
+
+Solve for \( \frac{dy}{dx} \):
+
+\[
+\frac{dy}{dx} = y \cdot \left( g'(x) \cdot \ln(f(x)) + g(x) \cdot \frac{f'(x)}{f(x)} \right)
+\]
+
+Substitute \( y = f(x)^{g(x)} \) back:
+
+\[
+\frac{dy}{dx} = f(x)^{g(x)} \cdot \left( g'(x) \cdot \ln(f(x)) + g(x) \cdot \frac{f'(x)}{f(x)} \right)
+\]
+
+This is how we get the answer. 
+
+
+
+\subsection{ Differentiation of function represented parametrically}
+- If $y$ is a function of $x$ such that
+$$
+x=\phi(t), y=\psi(t)
+$$
+where $t$ is the parameter then
+$$
+\frac{d y}{d x}=\frac{\frac{d y}{d t}}{\frac{d x}{d t}} \text {, i.e., } \frac{\psi^{\prime}(t)}{\phi^{\prime}(t)} \text {. }
+$$
+
+
+\subsection{ Differentiation of one function w.r.t. another function}
+
+This is an application of the chain rule
+- If $y=\phi(x)$ and $z=\psi(x)$ then
+$$
+\frac{d y}{d z}=\frac{\frac{d y}{d x}}{\frac{d z}{d x}} \text {, i.e., } \frac{\phi^{\prime}(x)}{\psi^{\prime}(x)} \text {. }
+$$
+\textbf{Note}
+ $$\frac{d y}{d x} \times \frac{d x}{d y}=1$$
+ 
+\subsection{Higher derivatives of a function}
+If $y=f(x)$ then the derivative of $\frac{d y}{d x}$ w.r.t. $x$ is called the second derivative of $y$ w.r.t. $x$ and it is denoted by $\frac{d^2 y}{d x^2}$. - $\frac{d^2 y}{d x^2}=\frac{d}{d x}\left(\frac{d y}{d x}\right) ; \frac{d^3 y}{d x^3}=\frac{d}{d x}\left(\frac{d^2 y}{d x^2}\right)$
+- If $y$ is a function of $x$ given parametrically by $y=\phi(t), x=\psi(t)$, then
+$$
+\frac{d^2 y}{d x^2}=\frac{d}{d x}\left(\frac{d y}{d x}\right)=\frac{d}{d x}\left(\frac{\phi^{\prime}(t)}{\psi^{\prime}(t)}\right)=\frac{\frac{d}{d t}\left(\frac{\phi^{\prime}(t)}{\psi^{\prime}(t)}\right)}{\frac{d x}{d t}} .
+$$

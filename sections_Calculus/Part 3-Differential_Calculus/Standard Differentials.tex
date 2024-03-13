@@ -1,0 +1,134 @@
+Now, we are going to see some standard differentials that form the basis of solving literally any differential that one can encounter. 
+
+\begin{enumerate}
+    \item $\frac{d\left(x^n\right)}{dx} = nx^{n-1}$
+    \item $\frac{d(c)}{dx} = 0$
+    \item $\frac{d\left(\log_e x\right)}{dx} = \frac{1}{x}$ where $x > 0$
+    \item $\frac{d\left(e^x\right)}{dx} = e^x$
+    \item $\frac{d\left(a^x\right)}{dx} = a^x \cdot \log_e a$ where $a > 0$
+    \item $\frac{d(\sin x)}{dx} = \cos x$
+    \item $\frac{d(\cos x)}{dx} = -\sin x$
+    \item $\frac{d(\tan x)}{dx} = \sec^2 x$
+    \item $\frac{d(\sec x)}{dx} = \sec x \cdot \tan x$
+    \item $\frac{d(\cot x)}{dx} = -\csc^2 x$
+    \item $\frac{d(\csc x)}{dx} = -\csc x \cdot \cot x$
+    \item $\frac{d\left(\sin^{-1} x\right)}{dx} = \frac{1}{\sqrt{1-x^2}}$
+    \item $\frac{d\left(\cos^{-1} x\right)}{dx} = \frac{1}{\sqrt{1-x^2}}$
+    \item $\frac{d\left(\tan^{-1} x\right)}{dx} = \frac{1}{1+x^2}$
+    \item $\frac{d\left(\cot^{-1} x\right)}{dx} = \frac{-1}{1+x^2}$
+    \item $\frac{d\left(\sec^{-1} x\right)}{dx} = \frac{1}{|x| \sqrt{x^2-1}}$
+    \item $\frac{d\left(\csc^{-1} x\right)}{dx} = \frac{-1}{|x| \sqrt{x^2-1}}$
+\end{enumerate}
+
+
+\section{Proofs from First Principles}
+
+\begin{enumerate}
+    \item $\frac{d\left(x^n\right)}{dx} = nx^{n-1}$:
+    
+    \begin{outline}
+        We start with the definition of the derivative:
+    \[
+    \frac{d}{dx}(x^n) = \lim_{h \to 0} \frac{(x+h)^n - x^n}{h}
+    \]
+    Now, expand $(x+h)^n$ using the binomial theorem:
+    \[
+    (x+h)^n = x^n + nx^{n-1}h + \frac{n(n-1)}{2}x^{n-2}h^2 + \dots
+    \]
+    Subtract $x^n$ and divide by $h$:
+    \[
+    \lim_{h \to 0} \frac{(x+h)^n - x^n}{h} = \lim_{h \to 0} \left(nx^{n-1} + \frac{n(n-1)}{2}x^{n-2}h + \dots\right) = nx^{n-1}
+    \]
+    \end{outline}
+
+    \item $\frac{d(c)}{dx} = 0$:
+    
+    Since $c$ is a constant, the derivative of a constant with respect to $x$ is always zero.
+
+    \item $\frac{d\left(\log_e x\right)}{dx} = \frac{1}{x}$ where $x > 0$:
+    
+    \begin{outline}
+        We define $y = \log_e x$, which means $e^y = x$. Now, we differentiate both sides with respect to $x$:
+    \[
+    \frac{d}{dx}(e^y) = \frac{d}{dx}(x)
+    \]
+    Using the chain rule and the fact that $\frac{d}{dx}(e^y) = e^y \cdot \frac{dy}{dx}$, we get:
+    \[
+    e^y \cdot \frac{dy}{dx} = 1 \implies \frac{dy}{dx} = \frac{1}{e^y} = \frac{1}{x}
+    \]
+    \end{outline}
+
+    \item $\frac{d\left(e^x\right)}{dx} = e^x$:
+    
+    \begin{outline}
+        We can use the definition of the derivative and the limit definition of $e$ to prove this:
+    \[
+    \frac{d}{dx}(e^x) = \lim_{h \to 0} \frac{e^{x+h} - e^x}{h} = \lim_{h \to 0} \frac{e^x(e^h - 1)}{h} = e^x \cdot \lim_{h \to 0} \frac{e^h - 1}{h} = e^x \cdot 1 = e^x
+    \]
+    \end{outline}
+
+    \item $\frac{d\left(a^x\right)}{dx} = a^x \cdot \log_e a$ where $a > 0$:
+    
+    \begin{outline}
+        We can use the definition of the derivative and the chain rule to prove this:
+    \[
+    \frac{d}{dx}(a^x) = \lim_{h \to 0} \frac{a^{x+h} - a^x}{h} = \lim_{h \to 0} \frac{a^x(a^h - 1)}{h} = a^x \cdot \lim_{h \to 0} \frac{a^h - 1}{h}
+    \]
+    Now, let $y = a^h$, then $h = \log_a y$. As $h \to 0$, $y \to 1$, and thus $\log_a y \to 0$. So, we have:
+    \[
+    \lim_{h \to 0} \frac{a^h - 1}{h} = \lim_{y \to 1} \frac{y - 1}{\log_a y} = \lim_{y \to 1} \frac{\ln a}{\frac{1}{y}} = \lim_{y \to 1} y \ln a = \ln a
+    \]
+    Therefore, $\frac{d}{dx}(a^x) = a^x \cdot \log_e a$.
+    \end{outline}
+
+
+    \item $\frac{d(\sin x)}{dx} = \cos x$:
+
+\begin{outline}
+    Using the definition of the derivative and the limit definition of sine:
+\[
+\frac{d}{dx}(\sin x) = \lim_{h \to 0} \frac{\sin(x+h) - \sin x}{h}
+\]
+
+By using the angle addition formula for sine, we have:
+\[
+\sin(x+h) = \sin x \cos h + \cos x \sin h
+\]
+
+Substituting this into the limit definition of the derivative, we get:
+\[
+\frac{d}{dx}(\sin x) = \lim_{h \to 0} \frac{\sin x \cos h + \cos x \sin h - \sin x}{h} = \cos x \lim_{h \to 0} \frac{\sin h}{h}
+\]
+
+We know that $\lim_{h \to 0} \frac{\sin h}{h} = 1$, so:
+\[
+\frac{d}{dx}(\sin x) = \cos x
+\]
+
+\end{outline}
+\item  $\frac{d(\cos x)}{dx} = -\sin x$:
+
+\begin{outline}
+    Similarly, using the angle addition formula for cosine:
+\[
+\cos(x+h) = \cos x \cos h - \sin x \sin h
+\]
+
+Substituting this into the limit definition of the derivative, we get:
+\[
+\frac{d}{dx}(\cos x) = \lim_{h \to 0} \frac{\cos x \cos h - \sin x \sin h - \cos x}{h} = -\sin x \lim_{h \to 0} \frac{\sin h}{h}
+\]
+
+Again, using $\lim_{h \to 0} \frac{\sin h}{h} = 1$, we get:
+\[
+\frac{d}{dx}(\cos x) = -\sin x
+\]
+
+These are the proofs for the $\sin x$ and $\cos x$ derivatives.
+
+\end{outline}
+\end{enumerate}
+
+\textbf{Every other limit in the standard limit can be found out using algebraic combination rules laid out in the previous chapter and the few standard differentials we have already covered, }
+
+

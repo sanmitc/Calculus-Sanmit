@@ -1,0 +1,55 @@
+In the thrilling journey through calculus, we've explored the fascinating realm of limits and delved deep into the intricacies of differentiation. From understanding how functions behave at specific points to unraveling their rates of change, our exploration has been both enlightening and empowering. As we transition to the next chapter of our calculus adventure, we embark on a quest to uncover the hidden secrets of continuity.
+
+Continuity serves as the vital link between the concepts of limits and differentiation, bridging the gap between the two and offering profound insights into the behavior of functions. Just as limits provide us with a glimpse into the behavior of a function as it approaches a certain point, and differentiation allows us to discern its instantaneous rate of change, continuity unveils the seamless flow and interconnectedness of a function's values across its domain.
+
+In this chapter, we'll embark on a journey to explore the concept of continuity in its entirety, unraveling its significance, understanding its implications, and mastering its applications. From identifying continuous functions to analyzing the behavior of discontinuities, we'll navigate through a landscape rich with mathematical elegance and conceptual depth.
+
+So, let us venture forth with curiosity and determination, ready to unravel the mysteries of continuity and unlock the full potential of our understanding of calculus. With the foundation laid by our exploration of limits and differentiation, we are well-equipped to embark on this new chapter of our calculus odyssey.
+
+
+\section{What is Continuity}
+
+But what exactly do we mean by continuity? At its core, continuity encapsulates the idea of uninterrupted flow. A function \( f(x) \) is continuous at a point \( c \) if, intuitively, you can draw its graph without lifting your pencil off the paper at \( c \). This means that as \( x \) approaches \( c \), the values of \( f(x) \) approach a definite limit, and that limit is equal to \( f(c) \). In other words, there are no sudden jumps, breaks, or holes in the graph of \( f(x) \) at \( c \).
+
+Mathematically, we can define continuity more formally. A function \( f(x) \) is continuous at a point \( c \) if three conditions are met:
+
+1. \( f(c) \) is defined, meaning there's a value for \( f \) at \( c \).
+2. The limit of \( f(x) \) as \( x \) approaches \( c \) exists.
+3. The limit of \( f(x) \) as \( x \) approaches \( c \) is equal to \( f(c) \).
+
+This definition provides us with a rigorous framework for understanding continuity and lays the groundwork for exploring its implications and applications in various mathematical contexts.
+
+So, armed with our understanding of limits and differentiation, let us embark on this new chapter of our calculus odyssey, ready to unravel the mysteries of continuity and unlock the full potential of our mathematical prowess.
+
+\section{Discontinuities can creep in}
+
+Discontinuities in a function occur when there are abrupt changes or breaks in its graph. These can manifest in various forms, such as jumps, holes, or vertical asymptotes. Understanding discontinuities is crucial because they provide essential information about the behavior of a function. They indicate points where the function may behave unexpectedly, and they can have significant implications for its properties, such as its limits, derivatives, and integrals. By identifying and analyzing discontinuities, mathematicians and scientists can gain deeper insights into the behavior of functions, enabling them to make more accurate predictions and solve real-world problems effectively. Therefore, studying discontinuities is essential for advancing our understanding of mathematical concepts and their applications across various fields.
+
+\section{Types of Discontinuity}
+
+Some types of discontinuities frequently arise in the analysis of the functions.
+
+\textbf{1. Removable Discontinuities:}
+
+   a. \textbf{Isolated Point Discontinuities:} These occur when a hole or gap exists in the function's graph at a specific point. The function is defined at the concerned point, but the value differs from the approaching limits. However, the function can be made continuous by defining or redefining the function value at that point. An example of this is the function f(x)=|sgn(x)| , which is 0 at x=0, but 1 otherwise. This discontinuity can be removed by redefining the function at x=0 to be 1.    
+   b. \textbf{Missing Point Discontinuities:} These occur when a function is not defined at a specific point, resulting in a gap in its graph. However, if the function were defined at that point, it would be continuous. An example is the function \( g(x) = \frac{x^2-1}{x-1} \), which has a missing point discontinuity at \( x = 1 \) since the function is not defined at this point. But we can redefine the function to be 2 at x=1 to remove this discontinuity.
+
+\textbf{2. Non-Removable Discontinuities:}
+
+   a. \textbf{Jump Discontinuities:} These occur when the function "jumps" from one value to another at a specific point, resulting in a sudden change in its graph. Mathematically, the left-hand limit and the right-hand limit exist at the point of discontinuity, but they are not equal. An example of this is the function \( h(x) = \begin{cases} 1, & \text{if } x < 0 \\ 0, & \text{if } x \geq 0 \end{cases} \), which has a jump discontinuity at \( x = 0 \) where the function jumps from \( 1 \) to \( 0 \).
+
+   b. \textbf{Asymptotic Discontinuities (Infinite Discontinuities):} These occur when the function approaches positive or negative infinity at a specific point, resulting in an unbounded increase or decrease in its values. Mathematically, one or both of the one-sided limits diverge to infinity. An example is the function \( k(x) = \frac{1}{x} \) which has an asymptotic discontinuity at \( x = 0 \) since the function approaches positive or negative infinity as \( x \) approaches \( 0 \).
+
+   c. \textbf{Oscillatory Discontinuities (Essential Discontinuities):} These occur when there is no finite limit as the function approaches a certain point, resulting in a sudden change or oscillation in its behavior. Mathematically, neither the limit from the left nor the right exists, or they exist but are not equal. A classic example is the Dirichlet function \(f(x)=\sin(\frac{1}{x})\), which oscillates rapidly near x=0, resulting in an oscillatory discontinuity.
+
+
+
+\section{More notions of continuity}
+
+We saw what is meant by a function being continuous at a certain point. But \textbf{it can easily be extended to an interval.}. 
+
+\begin{outline}
+    A function is said to be continuous in the open interval (a,b) if it is continuous at every point of the open interval. 
+\end{outline}
+
+Also, there is another notion called directional continuity. It is really important when we are dealing with closed intervals. It says that a function can be left continuous or right continuous at a point, if one of the limit among the right and the left limit exists and it is equal to the value of the function at that particular point. 

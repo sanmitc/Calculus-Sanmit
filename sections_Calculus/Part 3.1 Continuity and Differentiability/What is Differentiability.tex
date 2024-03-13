@@ -1,0 +1,89 @@
+\chapter{Differentiability}
+
+
+\section{What is Differentiability}
+
+Differentiability is a fundamental concept in calculus that describes the smoothness of a function at a point within its domain. A function \( f(x) \) is said to be differentiable at a point \( x = a \) if it has a derivative at that point. The derivative of a function represents its rate of change, or the slope of the tangent line to the function's graph at that point.
+
+Mathematically, a function \( f(x) \) is differentiable at \( x = a \) if the following limit exists:
+
+\[ f'(a) = \lim_{h \to 0} \frac{f(a + h) - f(a)}{h} \]
+
+Here, \( f'(a) \) represents the derivative of \( f(x) \) at \( x = a \). If this limit exists, it means that as \( h \) approaches zero, the ratio \( \frac{f(a + h) - f(a)}{h} \) approaches a finite value, which is the slope of the tangent line to the graph of \( f(x) \) at \( x = a \).
+
+Geometrically, the differentiability of a function at a point means that the function has a well-defined tangent line at that point, and the function smoothly transitions from one side of the point to the other without any sudden jumps or discontinuities.
+
+A function can fail to be differentiable at a point for several reasons, including:
+
+1. \textbf{Corner or cusp}: If the function has a sharp corner or cusp at the point, the slope of the tangent line needs to be well-defined.\\
+2. \textbf{Vertical tangent}: If the slope of the tangent line becomes vertical at the point, the function is not differentiable at that point.\\
+3. \textbf{Discontinuity}: If the function is not continuous at the point, it cannot have a derivative.
+
+Differentiability is a stronger condition than continuity. All differentiable functions are continuous, but not all continuous functions are differentiable. For example, functions with corners, cusps, or vertical tangents are continuous but not differentiable at those points.
+
+In summary, differentiability of a function at a point \( x = a \) implies the existence of a well-defined derivative \( f'(a) \), representing the slope of the tangent line to the function's graph at that point.
+
+
+\begin{tikzpicture}[scale=1.5]
+
+% Axes
+\draw[->] (-1,0) -- (3,0) node[below right] {$x$};
+\draw[->] (0,-1) -- (0,3) node[above left] {$y$};
+
+% Function
+\draw[blue, domain=-0.5:2.5, smooth, thick] plot (\x, {0.5*\x^2}) node[right] {$y = f(x)$};
+
+% Tangent line at x=a
+\def\a{1} % x-coordinate
+\def\fa{0.5} % f(a)
+\def\dfa{1} % derivative at a
+\draw[dashed, red] (\a,0) -- (\a,{\fa + \dfa*(\x-\a)}) node[right] {$T$};
+
+% Point (a,f(a))
+\filldraw (\a,\fa) circle (1.5pt) node[above right] {$(a, f(a))$};
+
+% Arrow and label for derivative
+\draw[->] (\a+0.5, {\fa + \dfa*0.5}) -- (\a+0.1, {\fa + \dfa*0.1});
+\node[right] at (\a+0.5, {\fa + \dfa*0.5}) {$f'(a)$};
+
+\end{tikzpicture}
+
+
+\section{Differentiability in an interval}
+
+A function \( f(x) \) is said to be differentiable on an open interval \( (a, b) \) if it is differentiable at every point \( x \) within that interval. Formally, for each \( x \) in the interval \( (a, b) \), the following limit must exist:
+
+\[
+f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+\]
+
+This means that the function \( f(x) \) has a well-defined derivative at every point \( x \) within the interval \( (a, b) \). Geometrically, this implies that the graph of the function within the interval is smooth, without any abrupt changes or discontinuities.
+
+
+\section{What is the notion of continuous derivative}
+
+A function \( f(x) \) has a continuous derivative on an interval (a,b) if:
+
+\begin{enumerate}
+    \item \( f(x) \) is differentiable on (a,b), meaning that the derivative \( f'(x) \) exists for all \( x \) in (a,b), and
+    \item The derivative function \( f'(x) \) is continuous on (a,b).
+\end{enumerate}
+
+More formally:
+
+\begin{enumerate}
+    \item \( f(x) \) is differentiable on (a,b): For every \( x \) in (a,b), the limit
+    \[ \lim_{h \to 0} \frac{f(x + h) - f(x)}{h} \]
+    exists.
+  
+    \item \( f'(x) \) is continuous on (a,b): The limit
+    \[ \lim_{x_0 \to x} f'(x_0) = f'(x) \]
+    exists for all \( x \) in (a,b).
+\end{enumerate}
+
+In simpler terms, not only does the function have a well-defined derivative at every point within the interval, but also the behavior of the derivative function itself is smooth and continuous over the entire interval. The derivative function has no sudden jumps, breaks, or discontinuities within the interval (a,b).
+
+
+
+
+

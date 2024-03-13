@@ -1,0 +1,265 @@
+\section{examples}
+
+Solving differentiability problems can be achieved in a range of ways including calculating the derivative manually and checking its behaviour. Also, it can be intuitively done by drawing graphs. Also, algebraic combinations of two differentiable functions will always yield a differentiable function except division by zero has occurred and thus, it is also possible to break up bigger functions into smaller, more tractable chunks that can be analysed easily. 
+
+\begin{enumerate}
+\item valued function. Then find the number of points where $f(x)$ is not differentiable.\\\\
+
+
+\begin{outline}
+    Sol. Clearly $(x-1)^2 \sin \frac{1}{(x-1)}$ is differentiable at $x=0$, bu $|x|$ is not.
+So, $f(x)$ is not differentiable at $x=0$.
+Now for differentiability at $x=1$,
+$$
+\begin{aligned}
+& \lim _{x \rightarrow 1}\left[(x-1)^2 \sin \frac{1}{(x-1)}-|x|\right] \\
+& =0-1=-1=f(1)
+\end{aligned}
+$$
+$\therefore \quad f(x)$ is continuous at $x=1$.
+Now, $f^{\prime}\left(1^{+}\right)=\lim _{h \rightarrow 0} \frac{f(1+h)-f(1)}{h}$
+$$
+\begin{aligned}
+& =\lim _{h \rightarrow 0} \frac{h^2 \sin \frac{1}{h}-|1+h|-(-1)}{h} \\
+& =\lim _{h \rightarrow 0} \frac{h^2 \sin \frac{1}{h}-h}{h} \\
+& =0-1=-1
+\end{aligned}
+$$
+
+Similarly, we get $f^{\prime}\left(1^{-}\right)=-1$.
+So, $f(x)$ is differentiable at $x=1$
+\end{outline}
+
+\item Prove that function $f(x)=(\sin \pi x)(x-1)^{1 / 5}$ is differentiable at $x=1$. Also prove that its derivative is continuous at $x=1$.\\\\
+
+\begin{outline}
+    Sol. We have $f(x)=(\sin \pi x)(x-1)^{1 / 5}$
+Clearly $f(x)$ is continuous as both $\sin \pi x$ and $(x-1)^{1 / 5}$ are continuous.
+So, $f(x)$ is continuous at $x=1$.
+Now, $(x-1)^{1 / 5}$ is not differentiable (vertical tangent) at $x=1$, but $\sin \pi x=0$ at $x=1$.
+So, $f(x)$ is differentiable at $x=1$.
+Also,
+$$
+\begin{aligned}
+f^{\prime}\left(1^{-}\right) & =\lim _{h \rightarrow 0} \frac{f(1-h)-f(1)}{-h} \\
+& =\lim _{h \rightarrow 0} \frac{\sin [\pi(1-h)](1-h-1)^{1 / 5}-0}{-h} \\
+& =\lim _{h \rightarrow 0} \frac{\sin (\pi h)(-h)^{1 / 5}}{-h}=0
+\end{aligned}
+$$
+
+Similarly, we get $f^{\prime}\left(1^{+}\right)=0$
+Further, $f^{\prime}(x)= \begin{cases}\pi(\cos \pi x)(x-1)^{\frac{1}{5}}+\frac{\sin \pi x}{5(x-1)^{\frac{4}{5}}}, & x \neq 1 \\ 0, & x=1\end{cases}$
+
+Now
+$$
+\begin{aligned}
+\lim _{x \rightarrow 1} f^{\prime}(x) & =\lim _{x \rightarrow 1}\left[\pi(\cos \pi x)(x-1)^{\frac{1}{5}}+\frac{\sin \pi x}{5(x-1)^{\frac{4}{5}}}\right] \\
+& =0+\lim _{x \rightarrow 1} \frac{\sin \pi(1-x)}{\pi(1-x)} \cdot \frac{\pi(1-x)}{5(x-1)^{\frac{4}{5}}} \\
+& =0+\lim _{x \rightarrow 1} \frac{\pi}{5}(1-x)^{\frac{1}{5}} \\
+& =0=f^{\prime}(0)
+\end{aligned}
+$$
+
+Thus $f^{\prime}(x)$ is continuous at $x=1$.
+\end{outline}
+
+\item Discuss the differentiability of $f(x)=[x]+\sqrt{\{x\}}$, where $[$.$] and$ \{.\} denote the greatest integer function and fractional part respectively.\\\\
+
+\begin{outline}
+    Sol. We have $f(x)=[x]+\sqrt{x-[x]}$
+$[x]$ is discontinuous at all integral values of $x$.
+So, we must check continuity and differentiability at integral values of $x$.
+For continuity at some integer $x=k$
+$$
+\begin{aligned}
+& f(k)=[k]+\sqrt{k-[k]}=k+\sqrt{k-k}=k \\
+& \begin{aligned}
+\text { L.H.L. }=f\left(k^{-}\right) & =\left[k^{-}\right]+\sqrt{k^{-}-\left[k^{-}\right]} \\
+& =k-1+\sqrt{k-(k-1)} \\
+& =k
+\end{aligned}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\text { R.H.L. }=f\left(k^{+}\right) & =\left[k^{+}\right]+\sqrt{k^{+}-\left[k^{+}\right]} \\
+& =k+\sqrt{k-k} \\
+& =k
+\end{aligned}
+$$
+
+Thus $f(x)$ is continuous at $x=k$,
+For differentiability at $x=k$
+L.H.D.
+$$
+\begin{aligned}
+f^{\prime}(k) & =\lim _{h \rightarrow 0} \frac{f(h-h)-f(k)}{-h} \\
+& =\lim _{h \rightarrow 0} \frac{[k-h]+\sqrt{(k-h)-[k-h]}-k}{-h} \\
+& =\lim _{h \rightarrow 0} \frac{k-1+\sqrt{k-h-(k-1)}-k}{-h} \\
+& =\lim _{h \rightarrow 0} \frac{-1+\sqrt{1-h}}{-h} \\
+& =\lim _{h \rightarrow 0} \frac{-1+(1-h)}{-h(1+\sqrt{1-h})} \\
+& =\frac{1}{2}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+\text { R.H.D. } f^{\prime}\left(k^{\prime}\right) & =\lim _{h \rightarrow 0} \frac{f(k+h)-f(k)}{h} \\
+& =\lim _{h \rightarrow 0} \frac{[k+h]+\sqrt{(k+h)-[k+h]}-k}{h} \\
+& =\lim _{h \rightarrow 0} \frac{k+\sqrt{k+h-k}-k}{h} \\
+& =\lim _{h \rightarrow 0} \frac{\sqrt{h}}{h} \rightarrow \infty
+\end{aligned}
+$$
+
+So, $f(x)$ is not differentiable at $x=k, k \in Z$.
+\end{outline}
+
+
+\item Given a real-valued function $f(x)$ as follows:
+$$
+f(x)= \begin{cases}\frac{x^2+2 \cos x-2}{x^4}, & \text { for } x<0 \\ 1 / 12, & \text { for } x=0 \\ \frac{\sin x-\log \left(e^x \cos x\right)}{6 x^2}, & \text { for } x>0\end{cases}
+$$
+
+Test the continuity and differentiability of $f(x)$ at $x=0$.\\\\
+
+
+\begin{outline}
+    Sol.
+$$
+\begin{aligned}
+f\left(0^{+}\right) & =\lim _{h \rightarrow 0} \frac{\sin h-\log \left(e^{\left.h_i \cos h\right)}\right.}{6 h^2} \\
+& =\lim _{h \rightarrow 0} \frac{\cos h-\frac{e^h(\cos h-\sin h)}{e^h \cos h}}{12 h} \\
+& =\lim _{h \rightarrow 0} \frac{\cos h-(1-\tan h)}{12 h} \\
+& =\lim _{h \rightarrow 0} \frac{-\sin h+\sec ^2 h}{12} \\
+& =\frac{1}{12} \text { (Using L' Hospital's rule) } \\
+f\left(0^{-}\right) & =\lim _{h \rightarrow 0} \frac{h^2+2 \cos h-2}{h^4} \\
+& =\lim _{h \rightarrow 0} \frac{h^2+2\left[1-\frac{h^2}{2 !}+\frac{h^4}{4 !}\right]-2}{h^4} \\
+& =\frac{1}{12}
+\end{aligned}
+$$
+(Using L'Hospital's rule)
+
+Therefore, $f(x)$ is continuous at $x=0$.
+$$
+\begin{aligned}
+f^{\prime}\left(0^{+}\right) & =\lim _{h \rightarrow 0} \frac{f(h)-f(0)}{h} \\
+& =\lim _{h \rightarrow 0} \frac{\frac{\sin h-\log \left(e^h \cos h\right)}{6 h^2}-\frac{1}{12}}{h}
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+& =\lim _{h \rightarrow 0} \frac{2 \sin h-2 \log \left(e^h \cos h\right)-h^2}{12 h^3} \\
+& \lim _{h \rightarrow 0} \frac{2 \cos h-2(1-\tan h)-2 h}{36 h^2} \text { (Using L' Hospital's rule) } \\
+& =\lim _{h \rightarrow 0} \frac{\cos h-(1-\tan h)-h}{18 h^2} \\
+& =\lim _{h \rightarrow 0} \frac{-\sin h+\sec ^2 h-1}{36 h} \text { (Using L' Hospital's rule) } \\
+& =\lim _{h \rightarrow 0} \frac{-\cos h+2 \sec ^2 h \tan h}{36} \\
+& \begin{array}{l}
+=-\frac{1}{36} \\
+=\lim _{h \rightarrow 0} \frac{f(-h)-f(0)}{-h}
+\end{array} \\
+& \text { (Using L'Hospital's rule) } \\
+& \begin{aligned}
+f^{\prime}\left(0^{-}\right) & =\lim _{h \rightarrow 0} \frac{f(-h)-f(0)}{-h} \\
+& =\lim _{h \rightarrow 0} \frac{\frac{h^2+2 \cos h-2}{h^4}-\frac{1}{12}}{-h}
+\end{aligned} \\
+& =\lim _{h \rightarrow 0} \frac{12 h^2+24 \cos h-24-h^4}{-12 h^5} \\
+& =\lim _{h \rightarrow 0} \frac{12 h^2+24\left[1-\frac{h^2}{2 !}+\frac{h^4}{4 !}\right]-24-h^4}{-12 h^5}=0 \\
+&
+\end{aligned}
+$$
+
+Hence, $f(x)$ is continuous but non-differentiable at $x=0$.
+\end{outline}
+
+\end{enumerate}
+
+
+\section{Exercises}
+
+\begin{enumerate}[start=1]
+    \item If $\phi(x)=|\sin x|-|\cos x|$, find $\phi^{\prime}\left(\frac{\pi}{2}\right)$ if it exists.
+    \item If $f(x)=e^{|x|}$, find $f^{\prime}(0)$.
+    \item If $f(x)=x^2 \sin \frac{1}{x}, x \neq 0$, then find $f^{\prime}(0)$ if it exists.
+    \item Do $f^{\prime}(1)$ and $f^{\prime}(2)$ exist for the function
+    \[
+    f(x)= 
+    \begin{cases}
+      x[x], & 0 \leq x<2 \\
+      x^2-x, & 2 \leq x \leq 3 \\
+    \end{cases}
+    \]
+    \item Given $f(x)=|x|$ and $\phi(x)=\left|x^3\right|$. Do the derivatives $f^{\prime}(0)$ and $\phi^{\prime}(0)$ exist? Explain.
+    \item If $f(x)=x^2+4,0 \leq x<1$
+    \[
+    \begin{aligned}
+    2 x+3,1 \leq x \leq 2 \text { and, } \\
+    \Phi(x)=3 x-2,0 \leq x<1 \\
+    x^3, 1 \leq x \leq 2
+    \end{aligned}
+    \]
+    then find $\frac{d f}{d \Phi}$ at $x=1$ if it exists.
+    \item Determine the set of all points where the function $f(x)=\frac{x}{1+|x|}$ is differentiable.
+    \item Find the set points where $f(x)=x|x|$ is twice differentiable.
+    \item Let $f(x)$ be defined in the interval $[-2,2]$ such that
+    \[
+    \begin{array}{r}
+    f(x)=-1,-2 \leq x \leq 0 \\
+    x-1,0<x \leq 2
+    \end{array}
+    \]
+    and $g(x)=f(|x|)+|f(x)|$. Test the differentiability of $g(x)$ in $[-2,2]$.
+    \item A function is defined as follows:
+    \[
+    \begin{array}{r}
+    f(x)=x^3, x^2<1 \\
+    x, x^2 \geq 1 .
+    \end{array}
+    \]
+    Discuss limit, continuity and differentiability of $f(x)$ at $x=1$. Also draw the rough sketch of the function.
+    \item Determine the values of $x$ for which the following function fails to be continuous or differentiable:
+    \[
+    \begin{aligned}
+    f(x)= & 1-x, x<1 \\
+    & (1-x)(2-x), 1 \leq x \leq 2 \\
+    & 3-x, x>2 .
+    \end{aligned}
+    \]
+    \item Examine the continuity and differentiability of $f(x)$ at $x=0$ if
+    \[
+    \begin{gathered}
+    f(x)=x e^{-\left(\frac{1}{|x|}+\frac{1}{x}\right)}, x \neq 0 \\
+    0, x=0 .
+    \end{gathered}
+    \]
+    \item If $f(x)$ be defined as follows:
+    \[
+    \begin{aligned}
+    f(x)= & \frac{\sin x}{x}, x>0 \\
+    & 1-x \cos x, x \leq 0
+    \end{aligned}
+    \]
+    then discuss the continuity and differentiability of $f(x)$ at $x=0$.
+    \item Let $g(x)$ be a polynomial of degree one and $f(x)$ is defined by
+    \[
+    \begin{aligned}
+    f(x) & =g(x), x \leq 0 \\
+    & =\left(\frac{1+x}{2+x}\right)^{\frac{1}{x}}, x>0 .
+    \end{aligned}
+    \]
+    Find $g(x)$ such that $f(x)$ is continuous and $f^{\prime}(1)=f(-1)$.
+    \item Discuss the continuity and differentiability od $f(x)=|x-2|$ in the interval [1,3]. Also draw 3 rough sketch of the function in the interval.
+    \item Examine the continuity and differentiability of $f(x)$ at $x=3$ if
+    \[
+    \begin{aligned}
+    f(x)= & x[x], 0 \leq x<3 \\
+    & (x-1)[x], 3 \leq x \leq 4
+    \end{aligned}
+    \]
+    where $[x]$ is the greatest integer function. Give the qualitative sketch of the function in $[0,4]$.
+    \item Let $f(x)=\frac{x^2}{2}, 0 \leq x<1$
+    \[
+    2 x^2-3 x+\frac{3}{2}, 1 \leq x \leq 2 \text {. }
+    \]
+    Discuss the continuity of $f, f^{\prime}, f^{\prime \prime}$ in $[0,2]$.
+\end{enumerate}

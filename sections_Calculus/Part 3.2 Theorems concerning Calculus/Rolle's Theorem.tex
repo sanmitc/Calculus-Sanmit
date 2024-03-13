@@ -1,0 +1,58 @@
+The journey of beautiful theorems regarding calculus starts with Rolle's theorem. 
+
+\section{Roll's theorem}
+
+\textbf{Rolle's Theorem:} If $f(x)$ is continuous on the closed interval $[a, b]$, differentiable on the open interval $(a, b)$, and $f(a) = f(b)$, then there exists at least one number $c$ in the open interval $(a, b)$ such that $f'(c) = 0$.
+
+In mathematical notation, Rolle's Theorem can be expressed as:
+\begin{align*}
+    f(a) &= f(b) \\
+    \text{or} \quad f'(c) &= 0
+\end{align*}
+for some $c$ in the interval $(a, b)$.
+
+\textbf{The proof of this requires more general theorems like Mean value theorems. So, you have to trust this theorem with me for now. Although I am pretty sure you can intuitively feel the truthfulness of the theorem.}
+
+
+\subsection{Applications}
+
+The most important application of Rolle's theorem is finding the functions' roots. We integrate the function analytically and then see whether the integral has equal values in some interval. If it has some equal values then we conclude that the original function has one root in this interval. 
+
+
+\begin{enumerate}
+    \item \textbf{How many roots of the equation $(x-1)(x-2)(x-3)+(x-1)$ $(x-2)(x-4)+(x-2)(x-3)(x-4)+(x-1)(x-3)(x-4)$ $=0$ are positive?}\\\\
+Sol. Let the given equation be $f^{\prime}(x)=0$, where $f(x)=(x-1)$ $(x-2)(x-3)(x-4)$.
+
+Since $f(x)$ is continuous and differentiable and $f(1)=f(2)$ $=f(3)=f(4)=0$, according to the Rolle's theorem, there exists at least one solution of the equation $f^{\prime}(x)=0$ in each of the interyaly $(1,2),(2,3)$ and $(3,4)$.
+
+Now, $f^{\prime}(x)$ is a cubic function, so equation $f^{\prime}(x)=0$ has exacthy one root in each of the intervals $(1,2),(2,3)$ and $(3,4)$.
+Thus, $f^{\prime}(x)=0$ has three positive roots.
+
+
+\item \textbf{Let $f(x)$ be differentiable function and $g(x)$ be twice differentiable function. Zeros of $f(x)$ and $g^{\prime}(x)$ be $a$ and $b$ $(a<b)$, respectively. Show that there exists at least one root of equation $f^{\prime}(x) g^{\prime}(x)+f(x) \mathrm{g}^{\prime \prime}(x)=0$ in $(a, b)$.}\\\\
+
+Sol. We have $f^*(x) g^{\prime}(x)+f(x) g^{\prime \prime}(x)=0$.
+Clearly, L.H.S. is derivative of $\left(f(x) g^{\prime}(x)\right)$.
+Let $h(x)=f(x) g^{\prime}(x)$.
+Now, $h(a)=0=h(b)$
+$$
+\left[\text { As } f(a)=0 \text { and } g^{\prime}(b)^{=0]} \right.
+$$
+
+So, by Rolle's theorem in the interval $[a, b]$, we have $h^{\prime}(c)=0$. for at least one $c \in(a, b)$.
+or $\quad f^{\prime}(c) g^{\prime}(c)+f(c) g^{\prime \prime}(c)=0$.
+
+\end{enumerate}
+
+
+\subsection{Exercises}
+
+
+\begin{enumerate}
+    \item Prove that if $2 a_0^2<15 a$, all roots of $x^5-a_0 x^4+3 a x^3+b x^2$ $+c x+d=0$ cannot be real. It is given that $a_0, a, \dot{b}, c, d \in R$.
+\item Let $f(x)$ be continuous on $[a, b]$, differentiable in $(a, b)$ and $f(x) \neq 0$ for all $x \in[a, b]$. Then prove that there exists one $c \in(a, b)$ such that $\frac{f^{\prime}(c)}{f(c)}=\frac{1}{a-c}+\frac{1}{b-c}$.
+
+\item  Let $f$ and $g$ be functions, continuous on $[a, b]$, differentiable on $(a, b)$ and $f(a)=f(b)=0$. Then prove that there exists at least one $c \in(a, b)$ such that $g^{\prime}(c) f(c)+f^{\prime}(c)=0$
+\item  If $\phi(x)$ is a differentiable function $\forall x \in R$ and $a \in R^{+}$ such that $\phi(0)=\phi(2 a), \phi(a)=\phi(3 a)$ and $\phi(0) \neq \phi(a)$, then show that there is at least one root of equation $\phi^{\prime}(x+a)$ $=\phi^{\prime}(x)$ in $(0,2 a)$
+\item  Suppose that $\mathrm{f}$ is continuous on $[a, b]$, differentiable on $(a, b)$ and satisfies $f^2(a)-f^2(b)=a^2-b^2$. Then prove that equation $f(x) f^{\prime}(x)=x$ has at least one root in $(a, b)$.
+\end{enumerate}
