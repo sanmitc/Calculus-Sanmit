@@ -1,0 +1,170 @@
+\section{Mean Value Theorems Introduction}
+
+Mean value theorems are very important when it comes to analyzing function behavior when we know the behavior of the function at the endpoints. 
+
+There are generally two types of mean value theorem that we are going to study. One is the \textbf{Lagrange Mean Value theorem and the other is the Cauchy Mean Value theorem}.
+
+\section{Lagrange's Mean Value Theorem}
+
+\begin{outline}
+    If a function f(x) is :
+    \\
+    a. Continuous in the closed interval of [a,b], i.e. continuous at each point in the interval [a,b], and
+    \\
+    b. differentiable in the open interval (a,b), i.e. differentiable at each point in the interval (a,b), 
+    \\
+    then there exists at least one c in the interval (a,b) such that $f'(c)=\frac{f(a)-f(b)}{a-b}$
+\end{outline}
+
+
+\textbf{Proof}
+Consider the function:
+$F(x)=Ax+f(x)$
+and find a A such that the value of the function $F(x)$
+makes $F(a)=F(b)$.
+
+Such a function can be solved and it turns out that the function is:
+
+$$F(x) = f(x) -\frac{f(b)-f(a)}{b-a}x $$
+
+in which case we can use Rolle's theorem and recover a point within this interval so that $f'(c)=\frac{f(b)-f(a)}{b-a}$
+
+\begin{tikzpicture}[scale=1.5]
+  % Axes
+  \draw[->] (-0.5,0) -- (5,0) node[right] {$x$};
+  \draw[->] (0,-0.5) -- (0,3) node[above] {$f(x)$};
+  
+  % Function curve
+  \draw[domain=0.5:4.5,smooth,variable=\x,blue] plot ({\x},{0.3*\x*\x-1.2*\x+2});
+  
+  % Tangent line
+  \def\a{1.5} % x-coordinate of the point where f'(c) = slope of tangent
+  \pgfmathsetmacro{\fa}{0.3*\a*\a-1.2*\a+2} % y-coordinate of f(a)
+  \pgfmathsetmacro{\faprime}{0.6*\a-1.2} % slope of f(x) at x=a
+  \pgfmathsetmacro{\tangent}{\fa+\faprime*(\x-\a)} % equation of the tangent line
+  
+  \draw[red,dashed] (\a-0.5,{\tangent-\faprime*0.5}) -- (\a+0.5,{\tangent+\faprime*0.5}) node[right] {$f'(c)(x-a)$};
+
+  \draw[blue,dashed] (0.5,0.3*0.5*0.5-1.2*0.5+2) -- (2.35,0.3*2.35*2.35-1.2*2.35+2) node[right] {avg};
+  
+  % Points
+  \filldraw (\a,\fa) circle (1pt) node[below left] {$A(a,f(a))$};
+  \filldraw (\a,\tangent) circle (1pt) node[above right] {$T$};
+  
+  % Vertical line
+  \draw[dotted] (\a,0) -- (\a,\fa) node[midway,right] {$f'(c)$};
+  
+  % Labels
+  \node at (3,2) {$f(x)$};
+  \node at (5,0.8) {$y=f(a)+(x-a)f'(c)$};
+  \node at (\a,-0.2) {$a$};
+\end{tikzpicture}
+
+So, this picture is a graphical representation of MVT; here, we can see the plotted version of a function, a tangential line, and its slope at x=1.5. It is equal to the average slope of the function between 0.5 and 3
+
+\subsection{Some Examples}
+
+\begin{enumerate}
+    \item Let $f(x)$ and $g(x)$ be differentiable functions in $(a, b)$, continuous at $a$ and $b$, and $g(x) \neq 0$ in $[a, b]$. Then prove that $\frac{g(a) f(b)-f(\dot{a}) g(b)}{g(c) f^{\prime}(c)-f(c) g^{\prime}(c)}=\frac{(b-a) g(a) g(b)}{(g(c))^2}$ for at least one $c \in(a, b)$.
+
+Sol. We have to prove
+$$
+\frac{g(a) f(b)-f(a) g(b)}{g(c) f^{\prime}(c)-f(c) g^{\prime}(c)}=\frac{(b-a) g(a) g(b)}{(g(c))^2}
+$$
+
+After rearranging, we have
+$$
+\frac{g(c) f^{\prime}(c)-f(c) g^{\prime}(c)}{(g(c))^2}=\frac{\frac{f(b)}{g(b)}-\frac{f(a)}{g(a)}}{(b-a)}
+$$
+
+Let $h(x)=\frac{f(x)}{g(x)}$
+As $f(x)$ and $g(x)$ are differentiable functions in $(a, b), h(x)$ will also be differentiable in $(a, b)$.
+So, according to Lagrange's mean value theorem, there exists at least one $c \in(a, b)$ such that $h^{\prime}(c)=\frac{h(b)-h(a)}{b-a}$, which proves the required result.
+
+\item 
+Using mean value theorem, show that
+$$
+\frac{\beta-\alpha}{1+\beta^2}<\tan ^{-1} \beta-\tan ^{-1} \alpha<\frac{\beta-\alpha}{1+\alpha^2}, \beta>\alpha>0 .
+$$
+
+Sol. Consider function $f(x)=\tan ^{-1} x, x \in[\alpha, \beta]$.
+Since $f(x)$ is continuous and differentiable, there exists at least one $c \in(\alpha, \beta)$ such that
+$$
+\frac{f(\beta)-f(\alpha)}{\beta-\alpha}=f^{\prime}(c)
+$$
+
+Now, $f^{\prime}(x)=\frac{1}{1+x^2}$
+$$
+\therefore \quad f^{\prime}(c)=\frac{1}{1+c^2}
+$$
+
+Now, $\alpha<c<\beta$
+$$
+\begin{array}{ll}
+\Rightarrow \quad & \alpha^2<c^2<\beta^2 \\
+\Rightarrow & 1+\alpha^2<1+c^2<1+\beta^2 \\
+\Rightarrow & \frac{1}{1+\alpha^2}>\frac{1}{1+c^2}>\frac{1}{1+\beta^2} \\
+\Rightarrow & \frac{1}{1+\beta^2}<f^{\prime}(c)<\frac{1}{1+\alpha^2} \\
+\Rightarrow \quad & \frac{1}{1+\beta^2}<\frac{f(\beta)-f(\alpha)}{\beta-\alpha}<\frac{1}{1+\alpha^2} \\
+\Rightarrow \quad & \frac{\beta-\alpha}{1+\beta^2}<f(\beta)-f(\alpha)<\frac{\beta-\alpha}{1+\alpha^2} \\
+\Rightarrow \quad & \frac{\beta-\alpha}{1+\beta^2}<\tan ^{-1} \beta-\tan ^{-1} \alpha<\frac{\beta-\alpha}{1+\alpha^2}
+\end{array}
+$$
+\end{enumerate}
+
+
+\section{Cauchy Mean value theorem}
+
+CMVT, or the Cauchy Mean Value theorem, is a more general version of the Lagrange Mean Value Theorem. It says that if we have two functions, f(x) and g(x), in the interval [a,b], such that they are continuous in the closed interval [a,b]. Differentiable in the open interval (a,b), then there exists a point c inside this interval such that:
+
+$$\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$$
+
+\subsection{Some examples}
+
+Let $f$ be continuous on $[a, b], a>0$, and differentiable on $(a, b)$. Prove that there exists $c \in(a, b)$ such that $\frac{b f(a)-a f(b)}{b-a}=f(c)-c f^{\prime}(c)$.
+
+\begin{outline}
+Sol. $\frac{b f(a)-a f(b)}{b-a}=f(c)-c f^{\prime}(c)$ i.e., $\frac{\frac{f(a)}{a}-\frac{f(b)}{b}}{\frac{1}{a}-\frac{1}{b}}=\frac{\frac{f(c)-c f^{\prime}(c)}{c^2}}{\frac{1}{c^2}}$
+
+This suggests we have to consider the functions.
+$$
+g(x)=\frac{f(x)}{x} \text { and } h(x)=\frac{1}{x}
+$$
+
+Both the functions $g(x)$ and $h(x)$ are continuous and differentiable in $(a, b)$.
+Therefore, there exists at least one $c \in(a, b)$ for which or
+$$
+\begin{aligned}
+& \frac{g(a)-g(b)}{h(a)-h(b)}=\frac{g^{\prime}(c)}{f^{\prime}(c)} \\
+& \frac{\frac{f(a)}{a}-\frac{f(b)}{b}}{\frac{1}{a}-\frac{1}{b}}=\frac{\frac{f(c)-c f^{\prime}(c)}{c^2}}{\frac{1}{c^2}}
+\end{aligned}
+$$
+or $\quad \frac{b f^{\prime}(a)-a f(b)}{b-a}=f(c)-c f^{\prime}(c)$
+Hence proved.
+\end{outline}
+
+
+\subsection{Exercises}
+
+1. Find $c$ of Lagrange's mean value theorem for the function $f(x)=3 x^2+5 x+7$ in the interval $[1,3]$.\\
+2. If $f(x)$ is continuous in $[a, b]$ and differentiable in $(a, b)$, then prove that there exists at least one $c \in(a, b)$ such that $\frac{f^{\prime}(c)}{3 c^2}=\frac{f(b)-f(a)}{b^3-a^3}$.\\
+3. If $a, b \in R$ and $a<b$, then prove that there exists at least one real number $c \in(a, b)$ such that $\frac{b^2+a^2}{4 c^2}=\frac{c}{a+b}$.\\
+
+4. If $f(x)$ and $g(x)$ are continuous functions in $[a, b]$ and are differentiable in $(a, b)$, then prove that there exists at least one $c \in(a, b)$ for which
+$$
+\left|\begin{array}{ll}
+f(a) & f(b) \\
+g(a) & g(b)
+\end{array}\right|=(b-a)\left|\begin{array}{ll}
+f(a) & f^{\prime}(c) \\
+g(a) & g^{\prime}(c)
+\end{array}\right| \text {, where } a<c<b .
+$$\\
+5. Prove that $\left|\tan ^{-1} x-\tan ^{-1} y\right| \leq|x-y| \forall x, y \in R$.\\
+6. Using Lagrange's mean value theorem, prove that $\frac{b-a}{b}<\log \left(\frac{b}{a}\right)<\frac{b-a}{a}$, where $0<a<b$.\\
+7. If $a>b>0$, with the aid of Lagrange's mean value theorem, prove that
+(a) $n b^{n-1}(a-b)<a^n-b^n<n a^{n-1}(a-b)$, if $n>1$.
+(b) $n b^{n-1}(a-b)>a^n-b^n>n d^{n-1}(a-b)$, if $0<n<1$.\\
+8. Let $f(x)$ and $g(x)$ be two functions which are defined and differentiable for all $x \geq x_0$. If $f\left(x_0\right)=g\left(x_0\right)$ and $f^{\prime}(x)>g^{\prime}(x)$ for all $x>x_0$, then prove that $f(x)>g(x)$ for all $x>x_0$.\\
+9. If $f(x)$ is differentiate in $[a, b]$, then prove that there exists at least one $c \in(a, b)$ such that $\left(a^2-b^2\right) f^{\prime}(c)$ $=2 c(f(a)-f(b))$.\\
+
