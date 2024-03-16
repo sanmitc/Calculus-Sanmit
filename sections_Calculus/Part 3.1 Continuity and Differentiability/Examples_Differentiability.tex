@@ -3,33 +3,6 @@
 Solving differentiability problems can be achieved in a range of ways including calculating the derivative manually and checking its behaviour. Also, it can be intuitively done by drawing graphs. Also, algebraic combinations of two differentiable functions will always yield a differentiable function except division by zero has occurred and thus, it is also possible to break up bigger functions into smaller, more tractable chunks that can be analysed easily. 
 
 \begin{enumerate}
-\item valued function. Then find the number of points where $f(x)$ is not differentiable.\\\\
-
-
-\begin{outline}
-    Sol. Clearly $(x-1)^2 \sin \frac{1}{(x-1)}$ is differentiable at $x=0$, bu $|x|$ is not.
-So, $f(x)$ is not differentiable at $x=0$.
-Now for differentiability at $x=1$,
-$$
-\begin{aligned}
-& \lim _{x \rightarrow 1}\left[(x-1)^2 \sin \frac{1}{(x-1)}-|x|\right] \\
-& =0-1=-1=f(1)
-\end{aligned}
-$$
-$\therefore \quad f(x)$ is continuous at $x=1$.
-Now, $f^{\prime}\left(1^{+}\right)=\lim _{h \rightarrow 0} \frac{f(1+h)-f(1)}{h}$
-$$
-\begin{aligned}
-& =\lim _{h \rightarrow 0} \frac{h^2 \sin \frac{1}{h}-|1+h|-(-1)}{h} \\
-& =\lim _{h \rightarrow 0} \frac{h^2 \sin \frac{1}{h}-h}{h} \\
-& =0-1=-1
-\end{aligned}
-$$
-
-Similarly, we get $f^{\prime}\left(1^{-}\right)=-1$.
-So, $f(x)$ is differentiable at $x=1$
-\end{outline}
-
 \item Prove that function $f(x)=(\sin \pi x)(x-1)^{1 / 5}$ is differentiable at $x=1$. Also prove that its derivative is continuous at $x=1$.\\\\
 
 \begin{outline}
