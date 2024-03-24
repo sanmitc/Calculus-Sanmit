@@ -1,0 +1,216 @@
+\section{Properties of Functions}
+
+Now, we start by categorizing the functions into different types to help us identify the chances of critical points occurring in some interval for a function.
+
+The functions are generally of two types:
+
+\begin{enumerate}
+    \item \textbf{A increasing function:}
+    A function f(x) is called an increasing function if for all $x_2\geq x_1$ we have $f(x_2) \geq f(x_1)$. Examples include $f(x)=x^3$,
+
+    An increasing function, wherever differentiable, will have a derivative greater than or equal to zero.
+
+    Also, there is another particular class of functions inside this division called the \textbf{strictly increasing functions}; these functions have the condition that for every $x_2>x_1$, we have $f(x_1>f(x_2)$. The derivative of these functions can be zero at discrete points but not in intervals. For example, if we take the example 
+
+    $$f(x)=x+\sin x$$
+
+    Then we see that the derivative of this function is: $1+\cos x$,
+
+    Thus, at some points(where the cos term becomes -1), the derivative of the function becomes 0, but it is not so for an interval, so this function is strictly increasing. 
+
+
+    \item \textbf{Decreasing function}
+     A function f(x) is called a decreasing function if for all $x_2\geq x_1$ we have $f(x_2) \geq f(x_1)$. Examples include $f(x)=-x$,
+
+
+     similar to the increasing function case, we have \textbf{strictly decreasing functions.} These functions always have negative derivatives except for possibly some discrete points. Examples include $f(x)=\sin x -x$
+\end{enumerate}
+
+
+A function can be strictly increasing/decreasing without being differentiable at all points. That is why the definition of growing functions/decreasing functions does not mention the derivatives. Still, the positive or negative derivatives are just a consequence of the definition of the increasing/decreasing function wherever the differentiability is present.
+
+
+\begin{tikzpicture}
+\begin{axis}[
+  xlabel={$x$},
+  ylabel={$f(x)$},
+  axis lines=middle,
+  xmin=-2, xmax=2,
+  ymin=-1, ymax=3,
+  xtick={-2,-1,0,1,2},
+  ytick={-1,0,1,2,3},
+  domain=-2:2,
+  samples=100
+]
+
+\addplot[blue, thick, domain=-2:0] {x};
+\addplot[blue, thick, domain=0:2] {x + 1};
+
+\end{axis}
+\end{tikzpicture}
+
+This picture shows that the function f(x) is increasing, and it increases strictly, but it is not continuous at x=0, thus nor differentiable.
+
+\subsection{Behaviour of composite functions}
+
+Now, we might ask a worthwhile question: Can we predict composite functions' behavior if we know the constituent functions? The answer is yes if and only if we know that these functions are monotonous. 
+
+This is demonstrated as an example where we want to see the behavior of f(g(x)) given the behavior that g(x) is an increasing function and f(x) is a decreasing function.
+This essentially means that if x increases, g(x) increases, and thus f(g(x)) decreases. This can be extrapolated to other cases as well. 
+
+\subsection{Non monotonic functions}
+
+In the case of Minima and Maxima, the functions we will deal with are non-monotonic; these functions have exciting features and behaviors near a particular set of points. These are increasing in some of the intervals in its domain but decreasing in others. These have \textbf{critical points}, defined as the points where the derivative is zero or undefined. These are the points that play a role in real-life scenarios.
+
+
+\section{Properties of The second derivatives of the functions}
+
+Now that we have completely seen that the notion of increasing and decreasing function and monotonicity ultimately comes from the first derivatives of the function, we will delve into what happens when we also consider the second derivatives. \textbf{What are the second derivative effects on the function?} 
+
+
+\subsection{Concavity of a Function}
+
+Functions can be classified into increasing and decreasing, but can more minute characteristics be hidden in the functions other than these? 
+
+What if we now consider the increasing/decreasing characteristics of the derivative of the function, not the function itself? Then we will get more properties called concavity/convexity of a function. 
+
+\textbf{Concavity and Convexity of a Function:}
+
+\begin{itemize}
+    \item \textbf{Concavity:} A function $f(x)$ is concave on an interval $I$ if, for any $a, b \in I$ and $t \in [0, 1]$, the following inequality holds:
+    \[
+    f(ta + (1-t)b) \geq tf(a) + (1-t)f(b)
+    \]
+    Geometrically, the function lies below the secant line joining any two points on its graph within the interval.
+
+    \item \textbf{Convexity:} A function $f(x)$ is convex on an interval $I$ if, for any $a, b \in I$ and $t \in [0, 1]$, the following inequality holds:
+    \[
+    f(ta + (1-t)b) \leq tf(a) + (1-t)f(b)
+    \]
+    Geometrically, the function lies above the secant line joining any two points on its graph within the interval.
+\end{itemize}
+
+\textbf{Examples:}
+\begin{enumerate}
+    \item The function $f(x) = x^2$ is convex on the interval $(-\infty, \infty)$ because its second derivative $f''(x) = 2$ is positive everywhere.
+    
+    \item The function $g(x) = -x^2$ is concave on the interval $(-\infty, \infty)$ because its second derivative $g''(x) = -2$ is negative everywhere.
+\end{enumerate}
+
+
+\textbf{A note-worthy thing in this regard would be that for concave-up functions, the tangent of the function drawn at any point will always be lower than the actual curve, and vice versa for concave-down functions.}
+
+\textbf{Now, what the connection of this with the second derivative?}
+
+\textbf{Reformulating Convexity in Terms of Second Derivative:}
+
+A function $f(x)$ is convex on an interval if and only if its second derivative $f''(x)$ is non-negative for all $x$ in that interval.
+
+Mathematically, this can be expressed as:
+\[
+f''(x) \geq 0 \quad \text{for all } x \text{ in the interval}
+\]
+
+Conversely, the function is strictly convex if the second derivative is strictly positive for all $x$.
+
+\textbf{Explanation:}
+
+When the second derivative $f''(x)$ is non-negative, the function is "bending upwards" or curving upwards at every point. This behavior is characteristic of convex functions because no "hills and valleys" dip below the tangent lines. Instead, the graph of a convex function lies above its tangent lines everywhere, giving it a "U-shaped" appearance.
+
+On the other hand, if the second derivative is strictly positive (greater than zero) at every point, then the function is strictly convex, meaning its graph is strictly above its tangent lines and exhibits a more pronounced upward curvature.
+
+
+
+\subsection{Jansen's inequality}
+
+The notion of convex and concave functions provide us with an important inequality called the Janssen's inequality:
+
+\textbf{Janssen's Inequality in One Dimension:}
+
+For a convex function $f(x)$ defined on an interval $[a, b]$, and any $x_0$ in $[a, b]$, Janssen's inequality states:
+\[
+f(x) \geq f(x_0) + f'(x_0)(x - x_0)
+\]
+where $f'(x_0)$ denotes the derivative of $f(x)$ at $x_0$.
+
+In words, Janssen's inequality asserts that the function value at any point $x$ in the interval $[a, b]$ is greater than or equal to the value of the tangent line at $x_0$ plus the product of the derivative at $x_0$ and the distance $x - x_0$ from $x_0$.
+
+This inequality is a crucial concept in calculus and optimization, especially when dealing with convex functions. It helps us understand how the function behaves locally around a point $x_0$, and it has important implications in mathematical analysis and applied fields like economics, engineering, and computer science.
+
+
+
+Another important consequence of this kind of inequality is that for a concave down function $f(x)$ and a set of points $\{ x_1, x_2, \ldots, x_n \}$, Janssen's inequality states:
+\[
+f\left(\frac{1}{n}\sum_{i=1}^{n} x_i\right) \geq \frac{1}{n}\sum_{i=1}^{n} f(x_i)
+\]
+
+for concave up functions the opposite is true. 
+
+\textbf{Explanation:}
+In simple terms, this inequality means that if you take the average of a set of points and then apply the function to that average, the result will be greater than or equal to the average of the function values applied to each individual point in the set. This property is an essential characteristic of convex(concave down) functions and is crucial in optimization and mathematical analysis.
+
+
+\subsection{Inflection Point}
+
+An inflection point on the graph of a function $f(x)$ is a point $x = c$ where the concavity changes. Mathematically, the second derivative $f''(x)$ changes sign at $x = c$.
+
+\textbf{Conditions for Inflection Point:}
+
+\begin{itemize}
+    \item If $f''(c) > 0$ when x approaches c from left, then $f(x)$ is concave up to the left of $x = c$ and concave down to the right of $x = c$. This is a point of inflection where the function changes from concave up to concave down.
+    
+    \item If $f''(c) < 0$ at the right of x=c, then $f(x)$ is concave down to the left of $x = c$ and concave up to the right of $x = c$. This is also a point of inflection where the function changes from being concave down to concave up.
+\end{itemize}
+
+Inflection points are essential in analyzing functions' behavior and understanding how their graphs' curvature changes.
+
+For example, let us take the graph of the function $f(x) = x^3$; it is concave down when x is less than zero, and it is concave up when x is positive. 
+
+\begin{tikzpicture}
+\begin{axis}[
+  xlabel={$x$},
+  ylabel={$f(x)$},
+  axis lines=middle,
+  xmin=-2, xmax=2,
+  ymin=-3, ymax=3,
+  xtick={-2,-1,0,1,2},
+  ytick={-1,0,1,2,3},
+  domain=-2:2,
+  samples=100
+]
+
+\addplot[blue, thick, domain=-2:2] {x^3};
+
+\end{axis}
+\end{tikzpicture}
+
+\subsection{Small Examples}
+
+Now, we will talk about some examples that show some of the applications of these inequalities.
+
+\begin{enumerate}
+    \item Prove that for a triangle $\sin A + \sin B + \sin C \leq \frac{3\sqrt{3}}{2}$
+
+    We know that the function is concave down in the interval $[0, \pi]$, i.e., the second derivative is always negative. Thus via Janssen's inequality, we have:
+
+    $$\sin(\frac{A+B+C}{3}) \geq \frac{\sin A + \sin B + \sin C}{3}$$
+
+    This effortlessly simplifies the desired expressions if we put $A+B+C=\pi$
+
+
+    \item (\textbf{ Inflection point}) Find the inflection points of the function $f(x)=e^{-x^2}$\\
+
+    \begin{outline}
+        If we consider the second derivative of the function $e^{-x^2}$, then we get:
+
+        $f(x)=e^{-x^2}(1-2x^2)$
+
+        Equating this to zero, we have that at points $1/\sqrt{2}$, the function experiences an inflection point. Putting the values together, we get that the value of the function at the inflection point is $1/\sqrt{e}$. Thus, the inflection points are:
+
+        $$(\pm \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{e}})$$
+    \end{outline}
+
+
+    
+\end{enumerate}
+

@@ -1,0 +1,57 @@
+\section{Tests for finding maxima and minima}
+
+Now, let us say we are given a function; how to determine where is the minima/maxima? \textbf{We will first consider continuous and differentiable functions.}
+
+\subsection{The first derivative test}
+
+We can calculate the critical points of a function by setting its derivative to zero.  At the critical point, the derivative might also be indefinite, but we will only consider the points where the derivative has become zero. 
+
+This will give us an idea of the possible existence of a minima or a maxima at that point. But it can also be a saddle point; even if it is not, we cannot say whether it is a maxima or a minima. For that, we need to do more tests.
+
+\subsection{Second Derivative Test}
+
+In this case, the first step is similar: find critical points where the first derivative is zero. Then, we have to find the second derivative at these critical points. 
+Based on the behavior of the second derivative, we can come to three types of conclusions:
+
+\begin{enumerate}
+    \item \textbf{Minima}: If the second derivative is positive at the point we are concerned about, we can say that the function has achieved minima. This is intuitively clear: the positive second derivative is positive, which means the first derivative is changing its sign from negative to positive at the critical point. Thus, the function decreased before the critical point, and after the critical point, the function increased. Thus, the function achieved a minimum at this point. 
+    \item \textbf{Maxima}: If the second derivative is negative, then we have to conclude that the function has achieved a maximum at that point. This is also intuitively clear if we want to compare it with the minima case. 
+    \item \textbf{No conclusive answer}: If the second derivative is zero, then we can not say conclusively what happened to the function. \textbf{We should consider higher-order derivatives and approach the problem graphically to determine whether there is any extrema and its nature. 
+}.
+For example, if we take the function $f(x)=x^3$, we will find that the function's first and second derivatives are both zero at the point $x=0$. Still, if we look at the point, then we will see that the function is neither a minimum nor a maximum of the function; these points are often called the \textbf{saddle points}, but if we contrast that with the function $f(x)=x^4$ then we will see that even if the first and second derivative is zero at $x=0$, the point serves as a minimum of the function. 
+\end{enumerate}
+
+\subsection{Finding Maxima or minima for functions that are non-continuous and/or non-differentiable}
+
+If the function has breaks at certain points, then we will have to see the function values near those breakpoints. We can then clearly visualize the increase/decrease in the function. 
+
+The same thing with non-differentiable functions: see the derivates at nearby points and examine whether these are sign-changing or not to find out the existence of an extrema at the point of non-differentiability. Some simple examples include: $f(x)=|x|$
+, that achieves a minima at $x=0$ but is not differentiable at that point. We find that the derivative of this function is -1, when x tends to 0 from the left, and +1 in the right. So, we can deduce that the derivative changes sign from negative to positive, i.e., a minimum is achieved.
+
+\subsection{Local Extremum}
+\begin{itemize}
+    \item A local maximum (or relative maximum) of a function $f(x)$ occurs at a point $c$ in its domain if $f(c)$ is greater than or equal to $f(x)$ for all nearby points $x$.
+    \item Similarly, a local minimum (or relative minimum) occurs at a point $c$ if $f(c)$ is less than or equal to $f(x)$ for all nearby points $x$.
+    \item These points are called "local" because they are compared only to nearby points, not necessarily to every point in the entire domain of the function.
+\end{itemize}
+
+\subsection*{Global Extremum}
+\begin{itemize}
+    \item A global maximum (or absolute maximum) of a function $f(x)$ occurs at a point $c$ in its domain if $f(c)$ is greater than or equal to $f(x)$ for all points $x$ in the entire domain of $f$.
+    \item Similarly, a global minimum (or absolute minimum) occurs at a point $c$ if $f(c)$ is less than or equal to $f(x)$ for all points $x$ in the entire domain of $f$.
+    \item These points are called "global" because they are compared to all points in the domain, not just nearby points.
+\end{itemize}
+
+In summary:
+\begin{itemize}
+    \item Local extremum refers to a function's maximum or minimum value within a specific neighborhood or interval around a point.
+    \item Global extremum refers to a function's maximum or minimum value across its entire domain.
+\end{itemize}
+
+Finding local extremum involves analyzing critical points and using tests like the first and second derivative tests. However, finding global extremum requires examining the function's behavior across its entire domain, which may involve analyzing endpoints, discontinuities, or using optimization techniques. Global extremum are often more significant because they represent the function's overall maximum or minimum value.
+
+
+ 
+
+
+

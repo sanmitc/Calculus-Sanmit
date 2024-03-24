@@ -1,0 +1,42 @@
+\section{Derivatives as Rate of Change}
+
+Derivatives are, by definition, the rate of change of some function with respect to the independent variable. How does this rate of change come up in real-life situations?
+
+We can only see some examples:
+
+\begin{Enumerate}
+    \item A cone with half angle $\theta$ is being filled with water at a rate $\alpha m^3/s$. The water level is already at h. Now, a nozzle at the bottom of the cone lets out water at a rate of $\beta m^3/s$, $\alpha>\beta$. Calculate the rate of change in the height of the water column.
+
+
+    \begin{outline}
+        Now, the net influx of water is $\alpha -\beta$, and the increase in volume in an infinitesimal time will be $dV=(\alpha-\beta)dt$; now, if the increase in height in this time period is dh. Then, the total volume increase is going to be: 
+        $$dV=Adh=\pi h^2 \tan^2\theta dh$$
+
+        Equating the two, we get:
+        $$d\frac{dh}{dt}= \frac{\alpha-\beta}{\pi h^2 \tan^2\theta}$$
+        giving the rate of change of height with respect to time.
+         \end{outline}
+
+
+    \item A rod is leaning against a wall. The length of the rod is l, and the angle it makes with the horizontal line is $\theta$; the upper part of the rod starts to fall with a velocity v. What will be the velocity of the lower edge? What is the rate of change of angle $\theta$
+
+    We say that the vertical length of the wall from the point of contact of the rod to the bottom is given by y, and similarly, the horizontal distance from the point of contact and the corner of the wall is given by x. The length of the rod is constant. and $\frac{dy}{dt}=-v$
+
+    Now, $$
+    \begin{aligned}
+    x^2+y^2=c\\
+    & 2x\frac{dx}{dt}+ 2y\frac{dy}{dt}=0\\
+    & 2xv_x -2yv=0\\
+    & v_x  = \frac{yv}{x}=v\tan\theta\\
+    \end{aligned}
+     $$
+
+     And the rate of change of angle $\theta$ is, 
+     $$
+     \begin{aligned}
+         y=l\tan\theta\\
+         \frac{dy}{dt}=l\sec^2\theta \frac{d\theta}{dt}\\
+         -v=l\sec^2\theta \frac{d\theta}{dt}\\
+         \frac{d\theta}{dt}=-\frac{v}{l}\cos^2\theta\\
+     \end{aligned}$$
+\end{Enumerate}
